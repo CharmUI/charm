@@ -7,10 +7,16 @@ const webpackConfig = {
   mode: ENV,
   devtool: 'source-map',
   entry: {
-    charming: [path.join(mainPath, 'src/index')],
+    charm: [path.join(mainPath, 'src/index')],
   },
   output: {
     path: path.join(mainPath, 'dist'),
+  },
+  resolve: {
+    extensions: ['.css', '.js'],
+    alias: {
+      Stylesheets: path.join(mainPath, 'src/stylesheets/'),
+    },
   },
   module: {
     rules: [

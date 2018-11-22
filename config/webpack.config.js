@@ -18,7 +18,7 @@ const webpackEnvConfig = merge(
       plugins: [
         new HtmlWebpackPlugin({
           template: path.join(mainPath, 'src/template.html'),
-          title: 'Charming UI',
+          title: 'Charm UI',
         }),
       ],
     },

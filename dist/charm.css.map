@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/stylesheets/all.css"],"names":[],"mappings":"AAAA;AACA;AACA;;AAEA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACA","file":"charm.css","sourcesContent":[":root {\n    --color-red: red;\n}\n\n.class {\n    display: inline;\n    color: red;\n}\n\n.class__more {\n    color: red;\n    color: var(--color-red);\n}\n"],"sourceRoot":""}
