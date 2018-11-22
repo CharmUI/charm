@@ -1,11 +1,7 @@
-const path = require('path');
-
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const merge = require('webpack-merge');
 
-const ENV = process.env.NODE_ENV;
-const isProd = process.env.NODE_ENV === 'production';
-
+// Postcss plugins
 const postcssImport = require('postcss-import');
 const postcssNested = require('postcss-nested');
 const postcssCustomProperties = require('postcss-custom-properties');
@@ -20,37 +16,9 @@ const postCssPlugins = [
   perfectionist,
 ];
 
-const webpackConfig = {
-  mode: ENV,
-  entry: {
-    charming: ['./src/index'],
-  },
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-  },
-  module: {
-    rules: [
-      {
-        test: /\.m?js$/,
-        exclude: /(node_modules)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-          },
-        },
-      },
-    ],
-  },
-};
+const isProd = process.env.NODE_ENV === 'production';
 
 const webpackCssConfig = merge(
-  isProd
-    ? {
-      devtool: 'source-map',
-    }
-    : {},
-  webpackConfig,
   {
     module: {
       rules: [
@@ -60,10 +28,10 @@ const webpackCssConfig = merge(
           use: [
             isProd
               ? {
-                loader: 'style-loader',
+                loader: MiniCssExtractPlugin.loader,
               }
               : {
-                loader: MiniCssExtractPlugin.loader,
+                loader: 'style-loader',
               },
             {
               loader: 'css-loader',
@@ -91,6 +59,4 @@ const webpackCssConfig = merge(
   },
 );
 
-module.exports = [
-  webpackCssConfig,
-];
+module.exports = webpackCssConfig;

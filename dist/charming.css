@@ -4,6 +4,7 @@
 
 .class {
     display: inline;
+    color: red;
 }
 
 .class__more {

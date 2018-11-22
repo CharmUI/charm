@@ -2,9 +2,9 @@
   --color-red: red;
 }
 
-
 .class {
   display: inline;
+  color: red;
 
   &__more {
     color: var(--color-red);
