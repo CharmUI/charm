@@ -1,0 +1,12 @@
+:root {
+  --color-red: red;
+}
+
+
+.class {
+  display: inline;
+
+  &__more {
+    color: var(--color-red);
+  }
+}
