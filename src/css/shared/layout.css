@@ -52,7 +52,7 @@
     margin-bottom: 231px;
   }
 
-  @media (min-width: 576px) {
+  @media (min-width: 992px) {
     display: block;
     padding: 44px 0 44px 88px;
   }

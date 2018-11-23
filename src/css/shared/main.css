@@ -42,3 +42,15 @@ ul,
 dl {
   margin-bottom: 22px;
 }
+
+a {
+  color: #00529B;
+  text-decoration: underline;
+  background-color: transparent;
+  cursor: pointer;
+  
+  &:hover {
+    color: #00529B;
+    text-decoration: underline;
+  }
+}

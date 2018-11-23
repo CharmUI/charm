@@ -1,0 +1,36 @@
+.list {
+
+  &--style-none {
+
+    & li::before {
+      display: none !important; 
+    }
+  }
+
+  &-item {
+
+    &--style-none {
+
+      & li::before {
+        display: none !important; 
+      }
+    }
+  }
+}
+
+.text {
+
+  &--light {
+    color: var(--color-fontSecondary-70) !important;
+  }
+}
+
+.margin {
+
+  &-top {
+
+    &--1 {
+      margin-top: 11px;
+    }
+  }
+}
