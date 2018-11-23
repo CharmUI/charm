@@ -16,6 +16,7 @@ const webpackConfig = {
     extensions: ['.css', '.js'],
     alias: {
       Stylesheets: path.join(mainPath, 'src/stylesheets/'),
+      Static: path.join(mainPath, 'static/'),
     },
   },
   module: {
@@ -29,6 +30,17 @@ const webpackConfig = {
             presets: ['@babel/preset-env'],
           },
         },
+      },
+      {
+        test: /\.(png|jpg|gif|woff|woff2|ttf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]',
+            },
+          },
+        ],
       },
     ],
   },

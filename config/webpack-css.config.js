@@ -1,5 +1,8 @@
+const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const merge = require('webpack-merge');
+
+const mainPath = process.cwd();
 
 // Postcss plugins
 const postcssImport = require('postcss-import');
@@ -7,9 +10,13 @@ const postcssNested = require('postcss-nested');
 const postcssCustomProperties = require('postcss-custom-properties');
 const autoprefixer = require('autoprefixer');
 const perfectionist = require('perfectionist');
+const url = require('postcss-url');
 
 const postCssPlugins = [
-  postcssImport,
+  postcssImport(),
+  url({
+    url: 'rebase',
+  }),
   postcssNested,
   postcssCustomProperties,
   autoprefixer,
