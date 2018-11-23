@@ -1,12 +1,22 @@
 .layout {
   width: 100%;
+
+  padding: 44px 0;
+
+  @media (min-width: 992px) {
+    padding-left: 418px;
+  }
+}
+
+.content {
+  width: 100%;
   max-width: 715px;
 
   padding: 0 22px 0 33px;
-  margin: 88px 0 44px;
+  margin-bottom: 88px;
 
   @media (min-width: 576px) {
     padding: 0 99px 0 66px;
-    margin: 110px 0 88px;
+    margin-bottom: 88px;
   }
 }
