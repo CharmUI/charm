@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 const mainPath = process.cwd();
 const ENV = process.env.NODE_ENV;
@@ -11,10 +12,10 @@ const webpackConfig = {
   resolve: {
     extensions: ['.css', '.js'],
     alias: {
-      Main: path.join(mainPath, 'src/main/'),
-      Class: path.join(mainPath, 'src/class/'),
-      Tag: path.join(mainPath, 'src/tag/'),
-      Custom: path.join(mainPath, 'src/custom/'),
+      Main: path.join(mainPath, 'src/css/main/'),
+      Classed: path.join(mainPath, 'src/css/classed/'),
+      Tags: path.join(mainPath, 'src/css/tags/'),
+      Custom: path.join(mainPath, 'src/css/custom/'),
       Static: path.join(mainPath, 'static/'),
     },
   },
@@ -27,6 +28,7 @@ const webpackConfig = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env'],
+            plugins: ['@babel/plugin-syntax-dynamic-import'],
           },
         },
       },
@@ -43,6 +45,11 @@ const webpackConfig = {
       },
     ],
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      NODE_ENV: JSON.stringify(ENV),
+    }),
+  ],
 };
 
 module.exports = webpackConfig;

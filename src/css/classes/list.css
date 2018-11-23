@@ -1,0 +1,24 @@
+.list {
+  padding-left: 0;
+
+  &__item {
+    position: relative;
+
+    font-size: 13px;
+    line-height: 22px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+
+      width: 4px;
+      height: 4px;
+      background-color: rgba(74, 74, 74, 1);
+      border-radius: 50%;
+
+      left: -18px;
+      top: 10px;
+    }
+  }
+}

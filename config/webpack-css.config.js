@@ -60,7 +60,6 @@ const webpackCssConfig = merge(
     plugins: [
       new MiniCssExtractPlugin({
         filename: '[name].css',
-        chunkFilename: '[id].css',
       }),
     ],
   },

@@ -15,14 +15,16 @@ const webpackEnvConfig = merge(
   isProd
     ? {
       entry: {
-        charm: [path.join(mainPath, 'src/index')],
+        entry: [path.join(mainPath, 'src/entry')],
+        'charm.classed': [path.join(mainPath, 'src/css/classes/all')],
+        'charm.tagged': [path.join(mainPath, 'src/css/tags/all')],
       },
     }
     : {
       devtool: 'source-map',
       entry: {
-        custom: [path.join(mainPath, 'src/custom')],
-        charm: [path.join(mainPath, 'src/index')],
+        entry: [path.join(mainPath, 'src/entry')],
+        'charm.classed': [path.join(mainPath, 'src/css/classes/all')],
       },
       plugins: [
         new HtmlWebpackPlugin({
