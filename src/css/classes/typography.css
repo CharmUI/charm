@@ -24,13 +24,18 @@
     letter-spacing: 0.002em;
 
     color: var(--color-fontSecondary-light);
-  
-    &.is-active {
-      color: var(--color-fontSecondary);
-    }
 
     &:hover {
       color: var(--color-fontSecondary-70);
     }
+  
+    &.is-active {
+      color: var(--color-fontSecondary);
+    }
+  }
+
+  &_small {
+    font-size: 12px;
+    font-weight: 500;
   }
 }

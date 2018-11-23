@@ -11,7 +11,7 @@
 
     &--style-none {
 
-      & li::before {
+      &::before {
         display: none !important; 
       }
     }
@@ -31,6 +31,13 @@
 
     &--1 {
       margin-top: 11px;
+    }
+  }
+
+  &-bottom {
+
+    &--1 {
+      margin-bottom: 11px;
     }
   }
 }

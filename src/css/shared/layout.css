@@ -49,7 +49,11 @@
     display: inline-block;
 
     height: 33px;
-    margin-bottom: 231px;
+    margin-bottom: 88px;
+
+    @media (min-width: 992px) {
+      margin-bottom: 231px;
+    }
   }
 
   @media (min-width: 992px) {
