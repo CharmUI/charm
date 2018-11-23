@@ -20,3 +20,40 @@
     margin-bottom: 88px;
   }
 }
+
+.nav {
+  height: 33px;
+
+  padding: 0 22px 0 33px;
+  margin-bottom: 88px;
+
+  @media (min-width: 576px) {
+    padding: 0 99px 0 66px;
+    margin-bottom: 88px;
+  }
+}
+
+.aside {
+  position: fixed;
+  display: none;
+
+  height: 100%;
+  width: 418px;
+
+  top: 0;
+  left: 0;
+
+  padding: 44px 0 44px 33px;
+
+  &__logo {
+    display: inline-block;
+
+    height: 33px;
+    margin-bottom: 231px;
+  }
+
+  @media (min-width: 576px) {
+    display: block;
+    padding: 44px 0 44px 88px;
+  }
+}
