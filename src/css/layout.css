@@ -1,0 +1,10 @@
+.layout {
+  width: 100%;
+  max-width: 715px;
+
+  padding: 44px 22px 55px 33px;
+
+  @media (min-width: 576px) {
+    padding: 88px 99px 110px 66px;
+  }
+}
