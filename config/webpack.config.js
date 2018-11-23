@@ -13,8 +13,17 @@ const webpackEnvConfig = merge(
   webpackConfig,
   webpackCssConfig,
   isProd
-    ? {}
+    ? {
+      entry: {
+        charm: [path.join(mainPath, 'src/index')],
+      },
+    }
     : {
+      devtool: 'source-map',
+      entry: {
+        custom: [path.join(mainPath, 'src/custom')],
+        charm: [path.join(mainPath, 'src/index')],
+      },
       plugins: [
         new HtmlWebpackPlugin({
           template: path.join(mainPath, 'src/template.html'),

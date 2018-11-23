@@ -5,10 +5,6 @@ const ENV = process.env.NODE_ENV;
 
 const webpackConfig = {
   mode: ENV,
-  devtool: 'source-map',
-  entry: {
-    charm: [path.join(mainPath, 'src/index')],
-  },
   output: {
     path: path.join(mainPath, 'dist'),
   },
