@@ -1,5 +1,8 @@
 .list {
-  padding-left: 0;
+
+  & .list {
+    padding-left: 22px;
+  }
 
   &__item {
     position: relative;
@@ -19,6 +22,14 @@
 
       left: -18px;
       top: 10px;
+
+      @media (min-width: 576px) {
+        left: -22px;
+      }
+    }
+
+    &_no-style::before {
+      display: none;
     }
   }
 }

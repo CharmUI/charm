@@ -134,6 +134,20 @@ ol, ul, dl {
     margin-bottom: 22px;
 }
 
+.layout {
+    width: 100%;
+    max-width: 715px;
+    padding: 0 22px 0 33px;
+    margin: 55px 0 44px;
+}
+
+@media (min-width: 576px) {
+    .layout {
+        padding: 0 99px 0 66px;
+        margin: 110px 0 88px;
+    }
+}
+
 small {
     display: inline-block;
     vertical-align: top;
@@ -189,6 +203,10 @@ ol, ul {
     padding-left: 0;
 }
 
+ol ol, ol ul, ul ol, ul ul {
+    padding-left: 22px;
+}
+
 ol li, ul li {
     position: relative;
     font-size: 13px;
@@ -205,5 +223,15 @@ ol li::before, ul li::before {
     border-radius: 50%;
     left: -18px;
     top: 10px;
+}
+
+@media (min-width: 576px) {
+    ol li::before, ul li::before {
+        left: -22px;
+    }
+}
+
+.list__item_no-style::before {
+    display: none;
 }
 

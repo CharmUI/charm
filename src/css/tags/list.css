@@ -2,6 +2,11 @@ ol,
 ul {
   padding-left: 0;
 
+  & ol,
+  & ul {
+    padding-left: 22px;
+  }
+
   & li {
     position: relative;
 
@@ -20,6 +25,14 @@ ul {
 
       left: -18px;
       top: 10px;
+
+      @media (min-width: 576px) {
+        left: -22px;
+      }
     }
   }
+}
+
+.list__item_no-style::before {
+  display: none;
 }

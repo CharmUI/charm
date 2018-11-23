@@ -137,12 +137,14 @@ ol, ul, dl {
 .layout {
     width: 100%;
     max-width: 715px;
-    padding: 44px 22px 55px 33px;
+    padding: 0 22px 0 33px;
+    margin: 55px 0 44px;
 }
 
 @media (min-width: 576px) {
     .layout {
-        padding: 88px 99px 110px 66px;
+        padding: 0 99px 0 66px;
+        margin: 110px 0 88px;
     }
 }
 
@@ -197,8 +199,8 @@ ol, ul, dl {
     margin-top: 33px;
 }
 
-.list {
-    padding-left: 0;
+.list .list {
+    padding-left: 22px;
 }
 
 .list__item {
@@ -217,5 +219,15 @@ ol, ul, dl {
     border-radius: 50%;
     left: -18px;
     top: 10px;
+}
+
+@media (min-width: 576px) {
+    .list__item::before {
+        left: -22px;
+    }
+}
+
+.list__item_no-style::before {
+    display: none;
 }
 
