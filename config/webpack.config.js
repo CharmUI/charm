@@ -24,6 +24,7 @@ const webpackEnvConfig = merge(
       devtool: 'source-map',
       entry: {
         entry: [path.join(mainPath, 'src/entry')],
+        custom: [path.join(mainPath, 'src/css/custom/all')],
         'charm.classed': [path.join(mainPath, 'src/css/classes/all')],
       },
       plugins: [

@@ -8,6 +8,7 @@ const webpackConfig = {
   mode: ENV,
   output: {
     path: path.join(mainPath, 'dist'),
+    publicPath: '/',
   },
   resolve: {
     extensions: ['.css', '.js'],
@@ -38,7 +39,7 @@ const webpackConfig = {
           {
             loader: 'file-loader',
             options: {
-              name: '[path][name].[ext]',
+              name: '[name].[ext]',
             },
           },
         ],
