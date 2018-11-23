@@ -1,0 +1,5 @@
+.list-item {
+  &--no-style::before {
+    display: none !important;
+  }
+}

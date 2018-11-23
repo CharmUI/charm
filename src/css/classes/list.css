@@ -1,5 +1,7 @@
 .list {
 
+  & ol,
+  & ul,
   & .list {
     padding-left: 22px;
   }
@@ -26,10 +28,6 @@
       @media (min-width: 576px) {
         left: -22px;
       }
-    }
-
-    &_no-style::before {
-      display: none;
     }
   }
 }

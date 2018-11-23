@@ -32,7 +32,3 @@ ul {
     }
   }
 }
-
-.list__item_no-style::before {
-  display: none;
-}
