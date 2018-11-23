@@ -2,5 +2,9 @@
   --font-stack: 'Inter UI', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   /* Colors */
-  --color-fontMain: #212121;
+  --color-fontMain: rgba(33, 33, 33, 1);
+
+  /* Size */
+  --size-font-main: 14px;
+  --size-fontLH-main: 22px;
 }
