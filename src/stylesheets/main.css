@@ -1,0 +1,35 @@
+@import 'variables.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-stack);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--color-fontMain);
+  text-align: left;
+  background-color: #FAFAFA;
+}
+
+[tabindex="-1"]:focus {
+  outline: 0 !important;
+}
