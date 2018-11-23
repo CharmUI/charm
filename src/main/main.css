@@ -15,26 +15,30 @@ html {
   font-feature-settings: "cv05";
 }
 
-@-ms-viewport {
-  width: device-width;
-}
-
 body {
   margin: 0;
   font-family: var(--font-stack);
   font-size: 1rem;
   font-weight: 400;
   line-height: inherit;
-  color: var(--color-fontMain);
+  color: var(--color-fontBlack);
   text-align: left;
-  background-color: #FAFAFA;
+  background-color: var(--color-bgMain);
 }
 
-[tabindex="-1"]:focus {
-  outline: 0 !important;
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
 }
 
 p {
   margin-top: 0;
   margin-bottom: 1.5rem;
+}
+
+ol,
+ul,
+dl {
+  margin-bottom: 22px;
 }

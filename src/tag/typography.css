@@ -1,0 +1,19 @@
+small {
+  display: inline-block;
+  vertical-align: top;
+
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: 500;
+  letter-spacing: 0.008em;
+
+  color: var(--color-fontSecondary-70);
+  margin-top: 11px;
+}
+
+hr {
+  margin-top: 0;
+  margin-bottom: 21px;
+  border: 0;
+  border-top: 1px solid rgba(221, 221, 221, 1);
+}

@@ -1,1 +1,1 @@
-import './custom/all';
+import 'Custom/all';

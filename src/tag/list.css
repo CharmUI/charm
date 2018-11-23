@@ -1,0 +1,11 @@
+ol,
+ul {
+  padding-left: 0;
+
+  & li {
+    position: relative;
+
+    font-size: 13px;
+    line-height: 22px;
+  }
+}

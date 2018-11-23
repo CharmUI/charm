@@ -1,0 +1,10 @@
+.list {
+  padding-left: 0;
+
+  &__item {
+    position: relative;
+
+    font-size: 13px;
+    line-height: 22px;
+  }
+}

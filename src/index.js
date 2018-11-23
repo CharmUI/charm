@@ -1,1 +1,1 @@
-import 'Stylesheets/all';
+import 'Class/all';

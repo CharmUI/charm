@@ -25,14 +25,6 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
-body {
-	line-height: 1;
-}
-
-ol, ul {
-	list-style: none;
-}
-
 blockquote, q {
 	quotes: none;
 }
@@ -46,4 +38,26 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+[tabindex="-1"]:focus {
+  outline: 0 !important;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+ol,
+ul,
+dl {
+  list-style: none;
+  margin-top: 0;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
 }
