@@ -6,8 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server -d --hot --config config/webpack.config.js",
-    "build": "NODE_ENV=production webpack --config config/webpack.config.js",
-    "pre-push": "npm run build"
+    "build": "NODE_ENV=production webpack --config config/webpack.config.js"
   },
   "dependencies": {},
   "devDependencies": {
@@ -25,7 +24,6 @@
     "eslint-plugin-react": "^7.11.1",
     "file-loader": "^2.0.0",
     "html-webpack-plugin": "^4.0.0-beta.4",
-    "husky": "^1.2.0",
     "mini-css-extract-plugin": "^0.4.5",
     "perfectionist": "^2.4.0",
     "postcss-custom-properties": "^8.0.9",

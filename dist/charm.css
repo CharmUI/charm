@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'Inter UI';
+    font-style: normal;
+    font-weight: 400;
+    src: url(static/fonts/Inter-UI-Regular.woff2) format('woff2'),
+         url(static/fonts/Inter-UI-Regular.woff) format('woff'),
+         url(static/fonts/Inter-UI-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter UI';
+    font-style: normal;
+    font-weight: 500;
+    src: url(static/fonts/Inter-UI-Medium.woff2) format('woff2'),
+         url(static/fonts/Inter-UI-Medium.woff) format('woff'),
+         url(static/fonts/Inter-UI-Medium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter UI';
+    font-style: normal;
+    font-weight: 600;
+    src: url(static/fonts/Inter-UI-SemiBold.woff2) format('woff2'),
+         url(static/fonts/Inter-UI-SemiBold.woff) format('woff'),
+         url(static/fonts/Inter-UI-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter UI';
+    font-style: normal;
+    font-weight: 700;
+    src: url(static/fonts/Inter-UI-Bold.woff2) format('woff2'),
+         url(static/fonts/Inter-UI-Bold.woff) format('woff'),
+         url(static/fonts/Inter-UI-Bold.ttf) format('truetype');
+}
+
+:root {
+    --font-stack: 'Inter UI',
+                  -apple-system,
+                  BlinkMacSystemFont,
+                  "Segoe UI",
+                  Roboto,
+                  "Helvetica Neue",
+                  Arial,
+                  Noto Sans,
+                  sans-serif,
+                  "Apple Color Emoji",
+                  "Segoe UI Emoji",
+                  "Segoe UI Symbol",
+                  "Noto Color Emoji";
+    /* Colors */
+    --color-fontMain: rgba(33, 33, 33, 1);
+    /* Size */
+    --size-font-main: 14px;
+    --size-fontLH-main: 22px;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    font-size: 14px;
+    font-size: var(--size-font-main);
+    line-height: 22px;
+    line-height: var(--size-fontLH-main);
+    -webkit-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-font-feature-settings: "cv05";
+            font-feature-settings: "cv05";
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter UI',
+                 -apple-system,
+                 BlinkMacSystemFont,
+                 "Segoe UI",
+                 Roboto,
+                 "Helvetica Neue",
+                 Arial,
+                 Noto Sans,
+                 sans-serif,
+                 "Apple Color Emoji",
+                 "Segoe UI Emoji",
+                 "Segoe UI Symbol",
+                 "Noto Color Emoji";
+    font-family: var(--font-stack);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: inherit;
+    color: rgba(33, 33, 33, 1);
+    color: var(--color-fontMain);
+    text-align: left;
+    background-color: #fafafa;
+}
+
+[tabindex="-1"]:focus {
+    outline: 0 !important;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.layout {
+    width: 100%;
+    max-width: 715px;
+    padding: 44px 22px 55px 33px;
+}
+
+@media (min-width: 576px) {
+    .layout {
+        padding: 88px 99px 110px 66px;
+    }
+}
+
+
+/*# sourceMappingURL=charm.css.map*/
