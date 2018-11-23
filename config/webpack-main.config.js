@@ -15,7 +15,7 @@ const webpackConfig = {
   resolve: {
     extensions: ['.css', '.js'],
     alias: {
-      Stylesheets: path.join(mainPath, 'src/stylesheets/'),
+      Stylesheets: path.join(mainPath, 'src/css/'),
       Static: path.join(mainPath, 'static/'),
     },
   },
