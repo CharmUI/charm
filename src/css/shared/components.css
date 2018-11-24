@@ -1,0 +1,34 @@
+.lead {
+  display: inline-block;
+  vertical-align: top;
+
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: 500;
+  letter-spacing: 0.008em;
+}
+
+.link {
+
+  &_main {
+    font-size: 15px;
+    line-height: 33px;
+    font-weight: 600;
+    letter-spacing: 0.002em;
+
+    color: var(--color-fontSecondary-light);
+
+    &:hover {
+      color: var(--color-fontSecondary-70);
+    }
+  
+    &.is-active {
+      color: var(--color-fontSecondary);
+    }
+  }
+
+  &_small {
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
