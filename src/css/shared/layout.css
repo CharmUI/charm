@@ -48,7 +48,6 @@
   &__logo {
     display: inline-block;
 
-    height: 33px;
     margin-bottom: 88px;
 
     @media (min-width: 992px) {

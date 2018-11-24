@@ -1,13 +1,3 @@
-.small {
-  display: inline-block;
-  vertical-align: top;
-
-  font-size: 12px;
-  line-height: 22px;
-  font-weight: 500;
-  letter-spacing: 0.008em;
-}
-
 .hr {
   margin-top: 0;
   margin-bottom: 21px;
@@ -15,27 +5,12 @@
   border-top: 1px solid rgba(221, 221, 221, 1);
 }
 
-.link {
+.strong {
+  font-weight: 600;
+}
 
-  &_main {
-    font-size: 15px;
-    line-height: 33px;
-    font-weight: 600;
-    letter-spacing: 0.002em;
-
-    color: var(--color-fontSecondary-light);
-
-    &:hover {
-      color: var(--color-fontSecondary-70);
-    }
-  
-    &.is-active {
-      color: var(--color-fontSecondary);
-    }
-  }
-
-  &_small {
-    font-size: 12px;
-    font-weight: 500;
-  }
+.small {
+  font-size: 11px;
+  line-height: 33px;
+  font-weight: 500;
 }

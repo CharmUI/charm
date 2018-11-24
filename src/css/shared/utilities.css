@@ -1,5 +1,22 @@
 .list {
 
+  &--inline {
+
+    & li {
+      display: inline-block;
+
+      &::after {
+        content: '|';
+
+        margin: 0 0.8em 0 1em;
+      }
+
+      &:nth-last-of-type(1)::after {
+        content: '';
+      }
+    }
+  }
+
   &--style-none {
 
     & li::before {
@@ -20,8 +37,18 @@
 
 .text {
 
+  /* colors */
+  &--secondary {
+    color: var(--color-fontSecondary) !important;
+  }
+
   &--light {
     color: var(--color-fontSecondary-70) !important;
+  }
+
+  /* weight */
+  &--bold {
+    font-weight: 700 !important;
   }
 }
 
@@ -35,6 +62,10 @@
   }
 
   &-bottom {
+
+    &--0 {
+      margin-bottom: 0;
+    }
 
     &--1 {
       margin-bottom: 11px;
