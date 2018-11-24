@@ -71,3 +71,13 @@ a:not([href]):not([tabindex]):focus {
 a:not([href]):not([tabindex]):focus {
   outline: 0;
 }
+
+blockquote,
+h1,
+h2,
+h3 {
+
+	& p {
+		margin-bottom: 0;
+	}
+}

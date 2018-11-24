@@ -9,8 +9,22 @@ strong {
   font-weight: 600;
 }
 
-.small {
+small {
   font-size: 11px;
   line-height: 33px;
   font-weight: 500;
+}
+
+blockquote {
+  max-width: 594px;
+
+  padding: 22px;
+
+  margin: 22px 0;
+  margin-left: -22px;
+  margin-right: -22px;
+
+  font-size: 12px;
+
+  background-color: var(--color-bgYellow);
 }
