@@ -36,6 +36,32 @@ const webpackEnvConfig = merge(
     },
 );
 
+const webpackDocsConfig = merge(
+  webpackConfig,
+  webpackCssConfig,
+  isProd
+    ? {
+      entry: {
+        custom: [path.join(mainPath, 'src/css/custom/all')],
+        entry: [path.join(mainPath, 'src/entry')],
+        'charm.classed': [path.join(mainPath, 'src/css/classes/all')],
+      },
+      output: {
+        path: path.join(mainPath, 'docs'),
+        publicPath: '',
+      },
+      plugins: [
+        new HtmlWebpackPlugin({
+          template: path.join(mainPath, 'src/template.html'),
+          title: 'Charm UI',
+        }),
+      ],
+    }
+    : {
+    },
+);
+
 module.exports = [
   webpackEnvConfig,
+  webpackDocsConfig,
 ];

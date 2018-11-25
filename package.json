@@ -6,8 +6,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server -d --hot --config config/webpack.config.js",
-    "build": "NODE_ENV=production webpack --config config/webpack.config.js && npm run clean:js",
-    "clean:js": "rm -r dist/charm.*.js"
+    "build": "NODE_ENV=production webpack --config config/webpack.config.js && npm run build:docs && npm run clean:js",
+    "build:docs": "NODE_ENV=production webpack --config config/webpack.config.js",
+    "clean:js": "rm -r dist/charm.*.js docs/charm.*.js"
   },
   "dependencies": {},
   "devDependencies": {
