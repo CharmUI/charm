@@ -1,3 +1,5 @@
+@import 'flex.css';
+
 .list {
 
   &--inline {
@@ -38,6 +40,10 @@
 .text {
 
   /* colors */
+  &--blue {
+    color: var(--color-blue) !important;
+  }
+
   &--secondary {
     color: var(--color-fontSecondary) !important;
   }
@@ -49,6 +55,11 @@
   /* weight */
   &--bold {
     font-weight: 700 !important;
+  }
+
+  /* alignment */
+  &--right {
+    text-align: right !important;
   }
 }
 
@@ -70,5 +81,16 @@
     &--1 {
       margin-bottom: 11px;
     }
+  }
+}
+
+.display {
+  &--flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+
+  &--inline-block {
+    display: inline-block !important;
   }
 }

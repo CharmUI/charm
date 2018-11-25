@@ -22,9 +22,13 @@
 
   margin: 22px 0;
   margin-left: -22px;
-  margin-right: -22px;
+  margin-right: -11px;
 
   font-size: 12px;
 
   background-color: var(--color-bgYellow);
+
+  @media (min-width: 576px) {
+    margin-right: -22px;
+  }
 }
