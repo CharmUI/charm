@@ -18,7 +18,7 @@
 .blockquote {
   max-width: 594px;
 
-  padding: 22px;
+  padding: 22px 11px 22px 22px;
 
   margin: 22px 0;
   margin-left: -22px;
@@ -29,6 +29,7 @@
   background-color: var(--color-bgYellow);
 
   @media (min-width: 576px) {
+    padding: 22px;
     margin-right: -22px;
   }
 }
