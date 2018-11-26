@@ -14,7 +14,6 @@ const webpackEnvConfig = merge(
   webpackCssConfig,
   {
     entry: {
-      entry: [path.join(mainPath, 'src/entry')],
       'charm.classed': [path.join(mainPath, 'src/css/classes/all')],
       'charm.tagged': [path.join(mainPath, 'src/css/tags/all')],
     },

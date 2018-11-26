@@ -19,7 +19,7 @@ const webpackDocsConfig = merge(
     },
   {
     entry: {
-      entry: [path.join(mainPath, 'src/docs/entry')],
+      docs: [path.join(mainPath, 'src/docs/entry')],
     },
     output: {
       path: path.join(mainPath, 'docs'),
