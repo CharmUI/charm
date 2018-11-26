@@ -1,8 +1,5 @@
-const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const merge = require('webpack-merge');
-
-const mainPath = process.cwd();
 
 // Postcss plugins
 const postcssImport = require('postcss-import');
