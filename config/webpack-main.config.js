@@ -24,7 +24,7 @@ const webpackConfig = {
     publicPath: '/',
   },
   resolve: {
-    extensions: ['.css', '.js'],
+    extensions: ['.css', '.js', '.mdx'],
     alias: {
       Main: path.join(mainPath, 'src/css/main/'),
       Classed: path.join(mainPath, 'src/css/classed/'),

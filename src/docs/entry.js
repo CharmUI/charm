@@ -1,5 +1,5 @@
 import './css/all.css';
-import '../css/classes/all.css';
+import '../css/tags/all.css';
 
 import ReactDOM from 'react-dom';
 import Container from './container';
