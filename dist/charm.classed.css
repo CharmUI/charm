@@ -352,6 +352,7 @@ a:hover {
     line-height: 33px;
     font-weight: 600;
     letter-spacing: .002em;
+    text-decoration: none;
     color: rgba(155, 155, 155, 1);
     color: var(--color-fontSecondary-light);
 }

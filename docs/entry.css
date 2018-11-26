@@ -388,6 +388,7 @@ a:hover {
     line-height: 33px;
     font-weight: 600;
     letter-spacing: .002em;
+    text-decoration: none;
     color: rgba(155, 155, 155, 1);
     color: var(--color-fontSecondary-light);
 }
@@ -436,24 +437,24 @@ a:hover {
     }
 }
 
-.hr {
+hr {
     margin-top: 0;
     margin-bottom: 21px;
     border: 0;
     border-top: 1px solid rgba(221, 221, 221, 1);
 }
 
-.strong {
+strong {
     font-weight: 600;
 }
 
-.small {
+small {
     font-size: 11px;
     line-height: 33px;
     font-weight: 500;
 }
 
-.blockquote {
+blockquote {
     max-width: 594px;
     padding: 22px 11px 22px 22px;
     margin: 22px 0;
@@ -465,23 +466,23 @@ a:hover {
 }
 
 @media (min-width: 576px) {
-    .blockquote {
+    blockquote {
         padding: 22px;
         margin-right: -22px;
     }
 }
 
-.h1 {
+h1 {
     font-size: 24px;
     line-height: 33px;
     font-weight: 700;
     letter-spacing: -0.014em;
     color: rgba(51, 51, 51, 1);
     color: var(--color-fontMain);
-    margin-bottom: 55px;
+    margin-bottom: 66px;
 }
 
-.h2 {
+h2 {
     font-size: 18px;
     line-height: 26px;
     font-weight: 600;
@@ -492,7 +493,7 @@ a:hover {
     margin-top: 40px;
 }
 
-.h3 {
+h3 {
     font-size: 15px;
     line-height: 22px;
     font-weight: 600;
@@ -503,21 +504,21 @@ a:hover {
     margin-top: 33px;
 }
 
-.list {
+ol, ul {
     padding-left: 0;
 }
 
-.list ol, .list ul, .list .list {
+ol ol, ol ul, ul ol, ul ul {
     padding-left: 22px;
 }
 
-.list li {
+ol li, ul li {
     position: relative;
     font-size: 13px;
     line-height: 22px;
 }
 
-.list li::before {
+ol li::before, ul li::before {
     content: '';
     position: absolute;
     display: inline-block;
@@ -530,12 +531,12 @@ a:hover {
 }
 
 @media (min-width: 576px) {
-    .list li::before {
+    ol li::before, ul li::before {
         left: -22px;
     }
 }
 
-.button {
+button {
     display: inline-block;
     text-align: left;
     vertical-align: top;
@@ -557,23 +558,23 @@ a:hover {
                 box-shadow .15s ease-in-out;
 }
 
-.button:hover {
+button:hover {
     color: rgba(74, 74, 74, 1);
     color: var(--color-fontSecondary);
     text-decoration: none;
 }
 
-.button:focus, .button.focus {
+button:focus, button.focus {
     outline: 0;
     box-shadow: 0 0 0 .2rem rgba(0, 82, 155, .2);
     box-shadow: 0 0 0 .2rem var(--color-blue-20);
 }
 
-.button.disabled, .button:disabled {
+button.disabled, button:disabled {
     opacity: .65;
 }
 
-.button:not(:disabled):not(.disabled) {
+button:not(:disabled):not(.disabled) {
     cursor: pointer;
 }
 
