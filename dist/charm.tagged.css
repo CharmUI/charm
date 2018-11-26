@@ -252,7 +252,7 @@ hr {
 
 p {
     margin-top: 0;
-    margin-bottom: 1.5rem;
+    margin-bottom: 22px;
 }
 
 ol, ul, dl {
@@ -273,11 +273,12 @@ a:hover {
 
 .layout {
     width: 100%;
-    padding: 44px 0;
+    padding: 33px 0 44px;
 }
 
 @media (min-width: 992px) {
     .layout {
+        padding: 44px 0;
         padding-left: 418px;
     }
 }
@@ -316,7 +317,7 @@ a:hover {
     width: 418px;
     top: 0;
     left: 0;
-    padding: 44px 0 44px 33px;
+    padding: 33px 0 44px 33px;
 }
 
 .aside__logo {
@@ -370,11 +371,15 @@ a:hover {
     font-weight: 500;
 }
 
-.list__item-small {
+.list--aside ol, .list--aside ul {
+    padding-left: 22px;
+}
+
+.list--aside li {
     position: relative;
 }
 
-.list__item-small::before {
+.list--aside li::before {
     content: '\2014';
     position: absolute;
     display: inline-block;
@@ -390,7 +395,7 @@ a:hover {
 }
 
 @media (min-width: 576px) {
-    .list__item-small::before {
+    .list--aside li::before {
         left: -22px;
     }
 }

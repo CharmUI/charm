@@ -13,14 +13,14 @@ const webpackDocsConfig = merge(
   webpackConfig,
   webpackCssConfig,
   isProd
-    ? {
+    ? {}
+    : {
       devtool: 'source-map',
-    }
-    : {},
+    },
   {
     entry: {
       entry: [path.join(mainPath, 'src/entry')],
-      custom: [path.join(mainPath, 'src/docs/stylesheets/all')],
+      custom: [path.join(mainPath, 'src/docs/css/all')],
       'charm.classed': [path.join(mainPath, 'src/css/classes/all')],
     },
     output: {
