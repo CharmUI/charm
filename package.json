@@ -9,7 +9,7 @@
     "build": "npm run build:ui && npm run build:docs && npm run clean:js",
     "build:ui": "NODE_ENV=production webpack --config config/webpack-build.config.js",
     "build:docs": "NODE_ENV=production webpack --config config/webpack-docs.config.js",
-    "clean:js": "rm -r dist/charm.*.js docs/charm.*.js"
+    "clean:js": "rm -r dist/charm.*.js"
   },
   "dependencies": {},
   "devDependencies": {
