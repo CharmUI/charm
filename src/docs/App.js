@@ -25,9 +25,9 @@ export default function App() {
       <div className="layout">
         <nav className="nav">
           <ul className="list list--inline list--style-none">
-            <li className="list__item text--secondary"><small className="small">v16.7.0</small></li>
-            <li className="list__item text--secondary"><small className="small">Getting Started</small></li>
-            <li className="list__item text--light"><small className="small">20th November</small></li>
+            <li className="text--secondary"><small className="small">v16.7.0</small></li>
+            <li className="text--secondary"><small className="small">Getting Started</small></li>
+            <li className="text--light"><small className="small">20th November</small></li>
           </ul>
         </nav>
 
