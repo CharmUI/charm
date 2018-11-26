@@ -1,4 +1,5 @@
 .list {
+  padding-left: 0;
 
   & ol,
   & ul,
@@ -6,7 +7,7 @@
     padding-left: 22px;
   }
 
-  &__item {
+  & li {
     position: relative;
 
     font-size: 13px;

@@ -33,9 +33,14 @@
   }
 }
 
-.list {
+.list--aside {
 
-  &__item-small {
+  & ol,
+  & ul {
+    padding-left: 22px;
+  }
+
+  & li {
     position: relative;
 
     &::before {

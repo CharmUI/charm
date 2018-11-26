@@ -1,9 +1,10 @@
 .layout {
   width: 100%;
 
-  padding: 44px 0;
+  padding: 33px 0 44px;
 
   @media (min-width: 992px) {
+    padding: 44px 0;
     padding-left: 418px;
   }
 }
@@ -43,7 +44,7 @@
   top: 0;
   left: 0;
 
-  padding: 44px 0 44px 33px;
+  padding: 33px 0 44px 33px;
 
   &__logo {
     display: inline-block;
