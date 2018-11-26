@@ -43,6 +43,8 @@
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
     "react-hot-loader": "^4.3.12",
+    "react-router-dom": "^4.3.1",
+    "remark-slug": "^5.1.1",
     "style-loader": "^0.23.1",
     "webpack": "^4.26.0",
     "webpack-cli": "^3.1.2",

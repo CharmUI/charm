@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const slug = require('remark-slug');
 
 const mainPath = process.cwd();
 const ENV = process.env.NODE_ENV;
@@ -22,7 +23,9 @@ if (isProd) {
 
 const mdxConfigs = {
   loader: '@mdx-js/loader',
-  options: {},
+  options: {
+    mdPlugins: [slug],
+  },
 };
 
 const webpackConfig = {

@@ -1,42 +1,18 @@
-import Main from './content/main.mdx';
-import { Heading } from '../components/index';
+import { Route } from 'react-router-dom';
+
+import routes from './router';
 
 import Shell from './Shell';
 
-const rewritedComponents = {
-  h1: props => (
-    <Heading
-      {...props}
-      lead="This page is an overview of the React documentation and related resources."
-    />
-  ),
-};
-
-export default function App() {
+export default function Content() {
   return (
     <Shell>
       <div className="content">
-        <Main
-          components={rewritedComponents}
-        />
-      </div>
-
-      <div className="content">
-        <hr className="hr" />
-
-        <div className="display--flex justify-content--between">
-          <button type="button" className="button">
-            Previous
-            <br />
-            <span className="text--blue">— Contents</span>
-          </button>
-
-          <button type="button" className="button text--right">
-            <span className="text--secondary">Next</span>
-            <br />
-            <span className="text--blue">Contributions —</span>
-          </button>
-        </div>
+        {routes.map(route => (
+          <Route
+            {...route}
+          />
+        ))}
       </div>
     </Shell>
   );
