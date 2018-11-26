@@ -4,9 +4,7 @@ import '../css/tags/all.css';
 import ReactDOM from 'react-dom';
 import Container from './container';
 
-const render = Component => ReactDOM.render(
-  <Component />,
+ReactDOM.render(
+  <Container />,
   document.getElementById('js-root'),
 );
-
-render(Container);
