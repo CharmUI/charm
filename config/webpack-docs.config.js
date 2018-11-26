@@ -19,9 +19,7 @@ const webpackDocsConfig = merge(
     },
   {
     entry: {
-      entry: [path.join(mainPath, 'src/entry')],
-      custom: [path.join(mainPath, 'src/docs/css/all')],
-      'charm.classed': [path.join(mainPath, 'src/css/classes/all')],
+      entry: [path.join(mainPath, 'src/docs/entry')],
     },
     output: {
       path: path.join(mainPath, 'docs'),
@@ -30,7 +28,6 @@ const webpackDocsConfig = merge(
     plugins: [
       new HtmlWebpackPlugin({
         template: path.join(mainPath, 'src/docs/template.html'),
-        title: 'Charm UI',
       }),
     ],
   },

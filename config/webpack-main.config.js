@@ -4,6 +4,19 @@ const webpack = require('webpack');
 const mainPath = process.cwd();
 const ENV = process.env.NODE_ENV;
 
+const babelConfigs = {
+  loader: 'babel-loader',
+  options: {
+    presets: ['@babel/preset-env', "@babel/preset-react"],
+    plugins: ['@babel/plugin-syntax-dynamic-import'],
+  },
+};
+
+const mdxConfigs = {
+  loader: '@mdx-js/loader',
+  options: {},
+};
+
 const webpackConfig = {
   mode: ENV,
   output: {
@@ -25,13 +38,14 @@ const webpackConfig = {
       {
         test: /\.m?js$/,
         exclude: /(node_modules)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-            plugins: ['@babel/plugin-syntax-dynamic-import'],
-          },
-        },
+        use: babelConfigs,
+      },
+      {
+        test: /.mdx?$/,
+        use: [
+          babelConfigs,
+          mdxConfigs,
+        ],
       },
       {
         test: /\.(png|jpg|gif|woff|woff2|ttf)$/,
@@ -47,6 +61,9 @@ const webpackConfig = {
     ],
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      React: 'react',
+    }),
     new webpack.DefinePlugin({
       NODE_ENV: JSON.stringify(ENV),
     }),
