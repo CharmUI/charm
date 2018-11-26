@@ -4,13 +4,21 @@ const webpack = require('webpack');
 const mainPath = process.cwd();
 const ENV = process.env.NODE_ENV;
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const babelConfigs = {
   loader: 'babel-loader',
   options: {
-    presets: ['@babel/preset-env', "@babel/preset-react"],
-    plugins: ['@babel/plugin-syntax-dynamic-import'],
+    presets: ['@babel/preset-env', '@babel/preset-react'],
+    plugins: [
+      '@babel/plugin-syntax-dynamic-import',
+    ],
   },
 };
+
+if (isProd) {
+  babelConfigs.options.plugins.push('transform-react-remove-prop-types');
+}
 
 const mdxConfigs = {
   loader: '@mdx-js/loader',
@@ -63,6 +71,7 @@ const webpackConfig = {
   plugins: [
     new webpack.ProvidePlugin({
       React: 'react',
+      PropTypes: 'prop-types',
     }),
     new webpack.DefinePlugin({
       NODE_ENV: JSON.stringify(ENV),

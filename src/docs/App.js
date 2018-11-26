@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Helmet } from 'react-helmet';
 
 import Main from './mdx/main.mdx';
-import { Heading, withLead } from './components';
+import { Heading } from '../components/index';
+
+const rewriteComponents = {
+  h1: memo(props => (
+    <Heading
+      {...props}
+      lead="This page is an overview of the React documentation and related resources."
+    />
+  )),
+};
 
 export default function () {
   return (
@@ -24,9 +33,7 @@ export default function () {
 
         <div className="content">
           <Main
-            components={{
-              h1: withLead(Heading, 'This page is an overview of the React documentation and related resources.'),
-            }}
+            components={rewriteComponents}
           />
         </div>
 

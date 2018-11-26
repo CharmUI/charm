@@ -29,5 +29,9 @@
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".mdx"] }],
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
+  },
+  "globals": {
+    "React": true,
+    "PropTypes": true
   }
 }
