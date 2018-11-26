@@ -12,8 +12,12 @@ const webpackCssConfig = require('./webpack-css.config.js');
 const webpackDocsConfig = merge(
   webpackConfig,
   webpackCssConfig,
+  isProd
+    ? {
+      devtool: 'source-map',
+    }
+    : {},
   {
-    devtool: 'source-map',
     entry: {
       entry: [path.join(mainPath, 'src/entry')],
       custom: [path.join(mainPath, 'src/docs/stylesheets/all')],
