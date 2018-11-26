@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet';
 
-export default function App(props) {
+export default function Shell({ children }) {
   return (
     <>
       <Helmet>
@@ -10,7 +10,7 @@ export default function App(props) {
       </Helmet>
 
       <div className="layout">
-        {props.children}
+        {children}
       </div>
 
       <nav className="nav">

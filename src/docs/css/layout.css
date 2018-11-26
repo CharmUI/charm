@@ -4,26 +4,24 @@
   padding: 155px 0 44px;
 
   @media (min-width: 992px) {
-    padding: 165px 0;
-    padding-left: 418px;
+    padding: 165px 0 44px 418px;
   }
 }
 
 .nav {
   position: absolute;
-  top: 33px;
-  left: auto;
   height: 33px;
 
+  top: 33px;
+  left: auto;
+
   padding: 0 22px 0 33px;
-  margin-bottom: 88px;
 
   @media (min-width: 576px) {
     top: 44px;
     left: 418px;
 
     padding: 0 99px 0 66px;
-    margin-bottom: 88px;
   }
 }
 
