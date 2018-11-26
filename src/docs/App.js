@@ -1,17 +1,15 @@
-import { memo } from 'react';
-
-import Main from './mdx/main.mdx';
+import Main from './content/main.mdx';
 import { Heading } from '../components/index';
 
 import Shell from './Shell';
 
-const rewriteComponents = {
-  h1: memo(props => (
+const rewritedComponents = {
+  h1: props => (
     <Heading
       {...props}
       lead="This page is an overview of the React documentation and related resources."
     />
-  )),
+  ),
 };
 
 export default function App() {
@@ -19,7 +17,7 @@ export default function App() {
     <Shell>
       <div className="content">
         <Main
-          components={rewriteComponents}
+          components={rewritedComponents}
         />
       </div>
 

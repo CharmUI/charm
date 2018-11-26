@@ -14,7 +14,7 @@ export default function Shell({ children }) {
       </div>
 
       <nav className="nav">
-        <ul className="list list--inline list--style-none">
+        <ul className="list--inline list--style-none">
           <li className="text--secondary"><small className="small">v16.7.0</small></li>
           <li className="text--secondary"><small className="small">Getting Started</small></li>
           <li className="text--light"><small className="small">20th November</small></li>
