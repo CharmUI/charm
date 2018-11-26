@@ -34,6 +34,61 @@
          url(Inter-UI-Bold.ttf) format('truetype');
 }
 
+.layout {
+    width: 100%;
+    padding: 155px 0 44px;
+}
+
+@media (min-width: 992px) {
+    .layout {
+        padding: 165px 0 44px 418px;
+    }
+}
+
+.nav {
+    position: absolute;
+    height: 33px;
+    top: 33px;
+    left: auto;
+    padding: 0 22px 0 33px;
+}
+
+@media (min-width: 576px) {
+    .nav {
+        top: 44px;
+        left: 418px;
+        padding: 0 99px 0 66px;
+    }
+}
+
+.aside {
+    position: fixed;
+    display: none;
+    height: 100%;
+    width: 418px;
+    top: 0;
+    left: 0;
+    padding: 33px 0 44px 33px;
+}
+
+.aside__logo {
+    display: inline-block;
+    margin-bottom: 88px;
+}
+
+@media (min-width: 992px) {
+    .aside__logo {
+        margin-bottom: 231px;
+    }
+}
+
+@media (min-width: 992px) {
+    .aside {
+        display: block;
+        padding: 44px 0 44px 88px;
+    }
+}
+
 :root {
     --font-stack: 'Inter UI',
                   -apple-system,
@@ -307,18 +362,6 @@ a:hover {
     text-decoration: underline;
 }
 
-.layout {
-    width: 100%;
-    padding: 33px 0 44px;
-}
-
-@media (min-width: 992px) {
-    .layout {
-        padding: 44px 0;
-        padding-left: 418px;
-    }
-}
-
 .content {
     width: 100%;
     max-width: 715px;
@@ -330,47 +373,6 @@ a:hover {
     .content {
         padding: 0 99px 0 66px;
         margin-bottom: 88px;
-    }
-}
-
-.nav {
-    height: 33px;
-    padding: 0 22px 0 33px;
-    margin-bottom: 88px;
-}
-
-@media (min-width: 576px) {
-    .nav {
-        padding: 0 99px 0 66px;
-        margin-bottom: 88px;
-    }
-}
-
-.aside {
-    position: fixed;
-    display: none;
-    height: 100%;
-    width: 418px;
-    top: 0;
-    left: 0;
-    padding: 33px 0 44px 33px;
-}
-
-.aside__logo {
-    display: inline-block;
-    margin-bottom: 88px;
-}
-
-@media (min-width: 992px) {
-    .aside__logo {
-        margin-bottom: 231px;
-    }
-}
-
-@media (min-width: 992px) {
-    .aside {
-        display: block;
-        padding: 44px 0 44px 88px;
     }
 }
 
