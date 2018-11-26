@@ -1,4 +1,5 @@
 import { HashRouter as Router, NavLink } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 import { Helmet } from 'react-helmet';
 
 function Shell({ children }) {
@@ -52,11 +53,11 @@ function Shell({ children }) {
             </li>
             <li className="list-item--style-none">
               <ul className="list--aside margin-bottom--1">
-                <li><a href="#try-react" className="link link_main link_small">Try React</a></li>
+                <li><NavHashLink to="/#try-react" className="link link_main link_small">Try React</NavHashLink></li>
                 <li className="list-item--style-none">
                   <ul className="list--aside">
-                    <li><a href="#more-on-react" className="link link_main link_small">More on react</a></li>
-                    <li><a href="#learn-react" className="link link_main link_small">Learn react</a></li>
+                    <li><NavHashLink to="/#more-on-react" className="link link_main link_small">More on react</NavHashLink></li>
+                    <li><NavHashLink to="/#learn-react" className="link link_main link_small">Learn react</NavHashLink></li>
                   </ul>
                 </li>
               </ul>
