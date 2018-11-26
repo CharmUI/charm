@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 
 function Shell({ children }) {
   return (
-    <Router>
+    <Router basename={`${process.env.PUBLIC_URL}/`}>
       <>
         <Helmet>
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />

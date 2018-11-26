@@ -77,7 +77,8 @@ const webpackConfig = {
       PropTypes: 'prop-types',
     }),
     new webpack.DefinePlugin({
-      NODE_ENV: JSON.stringify(ENV),
+      'process.env.NODE_ENV': JSON.stringify(ENV),
+      'process.env.PUBLIC_URL': JSON.stringify(process.env.PUBLIC_URL || ''),
     }),
   ],
 };
