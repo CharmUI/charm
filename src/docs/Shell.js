@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, NavLink } from 'react-router-dom';
+import { HashRouter as Router, NavLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 function Shell({ children }) {
