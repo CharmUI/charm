@@ -1,14 +1,3 @@
-.layout {
-  width: 100%;
-
-  padding: 33px 0 44px;
-
-  @media (min-width: 992px) {
-    padding: 44px 0;
-    padding-left: 418px;
-  }
-}
-
 .content {
   width: 100%;
   max-width: 715px;
@@ -19,45 +8,5 @@
   @media (min-width: 576px) {
     padding: 0 99px 0 66px;
     margin-bottom: 88px;
-  }
-}
-
-.nav {
-  height: 33px;
-
-  padding: 0 22px 0 33px;
-  margin-bottom: 88px;
-
-  @media (min-width: 576px) {
-    padding: 0 99px 0 66px;
-    margin-bottom: 88px;
-  }
-}
-
-.aside {
-  position: fixed;
-  display: none;
-
-  height: 100%;
-  width: 418px;
-
-  top: 0;
-  left: 0;
-
-  padding: 33px 0 44px 33px;
-
-  &__logo {
-    display: inline-block;
-
-    margin-bottom: 88px;
-
-    @media (min-width: 992px) {
-      margin-bottom: 231px;
-    }
-  }
-
-  @media (min-width: 992px) {
-    display: block;
-    padding: 44px 0 44px 88px;
   }
 }
