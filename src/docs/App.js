@@ -13,7 +13,7 @@ const rewriteComponents = {
   )),
 };
 
-export default function () {
+export default function App() {
   return (
     <>
       <Helmet>
