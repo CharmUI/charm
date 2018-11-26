@@ -3,14 +3,14 @@ import { Helmet } from 'react-helmet';
 
 export default function () {
   return (
-    <Fragment>
+    <>
       <Helmet>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
         <title>Charm</title>
       </Helmet>
-      
+
       <div className="layout">
         <nav className="nav">
           <ul className="list list--inline list--style-none">
@@ -25,20 +25,20 @@ export default function () {
             Getting Started
             <p className="lead text--light margin-top--1">This page is an overview of the React documentation and related resources.</p>
           </h1>
-      
+
           <hr className="hr" />
           <p>React is a JavaScript library for building user interfaces. Learn what React is all about on our homepage or in the tutorial.</p>
-      
+
           <h2 className="h2">Try React</h2>
-      
+
           <p>React has been designed from the start for gradual adoption, and you can use as little or as much React as you need. Whether you want to get a taste of React, add some interactivity to a simple HTML page, or start a complex React-powered app, the links in this section will help you get started.</p>
-          
+
           <h3 className="h3">More on react</h3>
           <p>React has been designed from the start for gradual adoption, and you can use as little or as much React as you need. Whether you want to get a taste of React, add some interactivity to a simple HTML page, or start a complex React-powered app, the links in this section will help you get started.</p>
-      
+
           <h3 className="h3">Learn react</h3>
           <p>React has been designed from the start for gradual adoption, and you can use as little or as much React as you need. Whether you want to get a taste of React, add some interactivity to a simple HTML page, or start a complex React-powered app, the links in this section will help you get started.</p>
-      
+
           <ul className="list">
             <li>If you prefer to <span className="strong">learn by doing</span>, start with our practical <a href="" className="link">tutorial</a>.</li>
             <li className="list-item--style-none">
@@ -48,7 +48,7 @@ export default function () {
             </li>
             <li>If you prefer to <span className="strong">learn concepts step</span> by step, start with our guide <a href="" className="link">to main concepts</a>.</li>
           </ul>
-      
+
           <p>React has been designed from the start for gradual adoption, and you can use as little or as much React as you need. Whether you want to get a taste of React, add some interactivity to a simple HTML page, or start a complex React-powered app, the links in this section will help you get started.</p>
 
           <blockquote className="blockquote">
@@ -98,6 +98,6 @@ export default function () {
           <li className="list-item--style-none"><a href="" className="link link_main">GitHub</a></li>
         </ul>
       </div>
-    </Fragment>
+    </>
   );
 }
