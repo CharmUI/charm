@@ -9,18 +9,29 @@ const isProd = process.env.NODE_ENV === 'production';
 const webpackConfig = require('./webpack-main.config.js');
 const webpackCssConfig = require('./webpack-css.config.js');
 
-const webpackEnvConfig = merge(
+const webpackDocsConfig = merge(
   webpackConfig,
   webpackCssConfig,
   {
+    devtool: 'source-map',
     entry: {
       entry: [path.join(mainPath, 'src/entry')],
+      custom: [path.join(mainPath, 'src/docs/stylesheets/all')],
       'charm.classed': [path.join(mainPath, 'src/css/classes/all')],
-      'charm.tagged': [path.join(mainPath, 'src/css/tags/all')],
     },
+    output: {
+      path: path.join(mainPath, 'docs'),
+      publicPath: '',
+    },
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: path.join(mainPath, 'src/docs/template.html'),
+        title: 'Charm UI',
+      }),
+    ],
   },
 );
 
 module.exports = [
-  webpackEnvConfig,
+  webpackDocsConfig,
 ];
