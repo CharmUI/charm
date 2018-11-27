@@ -1,58 +1,58 @@
-import Button from './button';
-
-function Footer({ contents, location, history }) {
-  const contentIndex = contents.reduce((acc, content, i) => {
-    if (content.path === location.pathname) return i;
-    return acc;
-  }, null);
-
-  const prevRoute = contents[contentIndex - 1];
-  const nextRoute = contents[contentIndex + 1];
-
-  function onClickHandler(path) {
-    history.push(path);
-  }
-
-  return contentIndex >= 0
-    ? (
-      <footer className="display--flex justify-content--between">
-        { prevRoute
-          ? (
-            <Button
-              onClick={() => onClickHandler(prevRoute.path)}
-            >
+function Footer({
+  prevRoute,
+  nextRoute,
+  onClickHandler,
+}) {
+  return (
+    <footer className="display--flex justify-content--between">
+      { prevRoute
+        ? (
+          <button
+            type="button"
+            onClick={() => onClickHandler(prevRoute.path)}
+          >
+            Previous
+            <br />
+            <span className="text--blue">
+              —&nbsp;
               { prevRoute.name }
-            </Button>
-          )
-          : <div />
-        }
+            </span>
+          </button>
+        )
+        : <div />
+      }
 
-        { nextRoute
-          ? (
-            <Button
-              onClick={() => onClickHandler(nextRoute.path)}
-              isRight
-            >
+      { nextRoute
+        ? (
+          <button
+            type="button"
+            onClick={() => onClickHandler(nextRoute.path)}
+            className="text--right"
+          >
+            Next
+            <br />
+            <span className="text--blue">
               { nextRoute.name }
-            </Button>
-          )
-          : <div />
-        }
-      </footer>
-    )
-    : null;
+              &nbsp;—
+            </span>
+          </button>
+        )
+        : <div />
+      }
+    </footer>
+  );
 }
 
 Footer.defaultProps = {
-  contents: [],
-  location: null,
-  history: null,
+  prevRoute: null,
+  nextRoute: null,
+  onClickHandler: () => {},
 };
 
 Footer.propTypes = {
-  contents: PropTypes.arrayOf(PropTypes.shape()),
-  location: PropTypes.shape(),
-  history: PropTypes.shape(),
+  prevRoute: PropTypes.shape(),
+  nextRoute: PropTypes.shape(),
+  onClickHandler: PropTypes.func,
 };
 
 export default Footer;

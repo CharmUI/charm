@@ -1,31 +1,26 @@
-import Package from 'Root/package.json';
-
-import List from './list';
-
-function Aside({ contents, location }) {
-  const updatedContent = contents.map(content => Object.assign({}, content, {
-    isCurrentPath: location.pathname === content.path,
-  }));
-
+function Aside({
+  logo,
+  nav,
+}) {
   return (
     <div className="aside">
       <div className="aside__logo">
-        <small className="small text--bold">{ Package.name }</small>
+        <small className="small text--bold">{ logo }</small>
       </div>
 
-      <List links={updatedContent} />
+      { nav }
     </div>
   );
 }
 
 Aside.defaultProps = {
-  contents: [],
-  location: null,
+  logo: null,
+  nav: null,
 };
 
 Aside.propTypes = {
-  contents: PropTypes.arrayOf(PropTypes.shape()),
-  location: PropTypes.shape(),
+  logo: PropTypes.string,
+  nav: PropTypes.element,
 };
 
 export default Aside;

@@ -1,8 +1,13 @@
 import { Fragment } from 'react';
 
-import Link from './link';
+function List(props) {
+  const {
+    links,
+    isInner,
+    LinkComponent,
+    HashLinkComponent,
+  } = props;
 
-function List({ links, isInner }) {
   return (
     <ul
       className={
@@ -11,20 +16,27 @@ function List({ links, isInner }) {
           : 'list--aside'
       }
     >
-      { links.map((link) => {
+      { links.map((linkProps) => {
         const {
           bullet,
           content,
           isCurrentPath = false,
-        } = link;
+        } = linkProps;
 
         return (
           <Fragment key={bullet}>
-            <Link {...link} isHashed={isInner} />
+            { isInner
+              ? <HashLinkComponent {...linkProps} />
+              : <LinkComponent {...linkProps} />
+            }
             { content && (isCurrentPath || isInner)
               ? (
                 <li className="list-item--style-none">
-                  <List links={content} isInner />
+                  <List
+                    {...props}
+                    links={content}
+                    isInner
+                  />
                 </li>
               )
               : null
@@ -39,11 +51,15 @@ function List({ links, isInner }) {
 List.defaultProps = {
   links: [],
   isInner: false,
+  LinkComponent: null,
+  HashLinkComponent: null,
 };
 
 List.propTypes = {
   links: PropTypes.arrayOf(PropTypes.shape()),
   isInner: PropTypes.bool,
+  LinkComponent: PropTypes.shape(),
+  HashLinkComponent: PropTypes.shape(),
 };
 
 export default List;

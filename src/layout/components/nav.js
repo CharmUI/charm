@@ -1,30 +1,29 @@
-import Package from 'Root/package.json';
-
-function Nav({ contents, location }) {
-  const currentRoute = contents.reduce((acc, content) => {
-    if (content.path === location.pathname) return Object.assign({}, acc, content);
-    return acc;
-  }, {});
-
+function Nav({
+  title,
+  lastUpdate,
+  version,
+}) {
   return (
     <nav className="nav">
       <ul className="list--inline list--style-none">
-        <li className="text--secondary"><small className="small">{ `v${Package.version}` }</small></li>
-        <li className="text--secondary"><small className="small">{ currentRoute.name }</small></li>
-        <li className="text--light"><small className="small">{ currentRoute.lastUpdate }</small></li>
+        { version && <li className="text--secondary"><small className="small">{ `v${version}` }</small></li> }
+        { title && <li className="text--secondary"><small className="small">{ title }</small></li> }
+        { lastUpdate && <li className="text--light"><small className="small">{ lastUpdate }</small></li> }
       </ul>
     </nav>
   );
 }
 
 Nav.defaultProps = {
-  contents: [],
-  location: null,
+  title: null,
+  lastUpdate: null,
+  version: null,
 };
 
 Nav.propTypes = {
-  contents: PropTypes.arrayOf(PropTypes.shape()),
-  location: PropTypes.shape(),
+  title: PropTypes.string,
+  lastUpdate: PropTypes.string,
+  version: PropTypes.string,
 };
 
 export default Nav;

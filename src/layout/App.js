@@ -1,49 +1,89 @@
 import {
-  HashRouter as Router,
   Route as Content,
   withRouter,
 } from 'react-router-dom';
 
-import { Helmet } from 'react-helmet';
+import Package from 'Root/package.json';
+
+import getLink from './Link';
+import withRouteScroll from './Scroll';
+
+import contents from './content/contents';
 
 import {
-  withRouteScroll,
   Shell,
   Footer,
   Aside,
   Nav,
+  List,
 } from './components';
 
-import contents from './content/contents';
+import {
+  getUpdatedContent,
+  getCurrentRoute,
+  getCurrentContentIndex,
+} from './helpers';
 
-const WithRouterFooter = withRouter(Footer);
-const WithRouterAside = withRouter(Aside);
-const WithRouterNav = withRouter(Nav);
+function App({ location, history }) {
+  const currentContentIndex = getCurrentContentIndex(contents, location);
+  const currentRoute = getCurrentRoute(contents, location);
+  const prevRoute = contents[currentContentIndex - 1];
+  const nextRoute = contents[currentContentIndex + 1];
 
-export default function App() {
+  const ShellAside = (
+    <Aside
+      logo={Package.name}
+      nav={(
+        <List
+          links={getUpdatedContent(contents, location)}
+          LinkComponent={getLink()}
+          HashLinkComponent={getLink(true)}
+        />
+      )}
+    />
+  );
+
+  const ShellNav = (
+    <Nav
+      title={currentRoute.name}
+      lastUpdate={currentRoute.lastUpdate}
+      version={Package.version}
+    />
+  );
+
+  const ShellFooter = (
+    <Footer
+      prevRoute={prevRoute}
+      nextRoute={nextRoute}
+      onClickHandler={path => history.push(path)}
+    />
+  );
+
   return (
-    <Router>
-      <>
-        <Helmet>
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-          <title>Charm</title>
-        </Helmet>
-
-        <Shell
-          footer={<WithRouterFooter contents={contents} />}
-          aside={<WithRouterAside contents={contents} />}
-          nav={<WithRouterNav contents={contents} />}
-        >
-          { contents.map(content => (
-            <Content
-              key={content.bullet}
-              {...content}
-              component={withRouteScroll(content.component)}
-            />
-          )) }
-        </Shell>
-      </>
-    </Router>
+    <Shell
+      aside={ShellAside}
+      nav={ShellNav}
+      footer={ShellFooter}
+    >
+      { contents.map(content => (
+        <Content
+          key={content.bullet}
+          {...content}
+          component={withRouteScroll(content.component)}
+        />
+      )) }
+    </Shell>
   );
 }
+
+App.defaultProps = {
+  location: null,
+  history: null,
+};
+
+App.propTypes = {
+  location: PropTypes.shape(),
+  history: PropTypes.shape(),
+};
+
+export default withRouter(App);
