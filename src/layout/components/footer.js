@@ -1,4 +1,4 @@
-import FooterButton from './button';
+import Button from './button';
 
 function Footer({ contents, location, history }) {
   const contentIndex = contents.reduce((acc, content, i) => {
@@ -18,25 +18,23 @@ function Footer({ contents, location, history }) {
       <footer className="display--flex justify-content--between">
         { prevRoute
           ? (
-            <FooterButton
+            <Button
               onClick={() => onClickHandler(prevRoute.path)}
-              path={prevRoute.path}
             >
               { prevRoute.name }
-            </FooterButton>
+            </Button>
           )
           : <div />
         }
 
         { nextRoute
           ? (
-            <FooterButton
+            <Button
               onClick={() => onClickHandler(nextRoute.path)}
-              path={nextRoute.path}
               isRight
             >
               { nextRoute.name }
-            </FooterButton>
+            </Button>
           )
           : <div />
         }

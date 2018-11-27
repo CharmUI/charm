@@ -18,7 +18,7 @@ const webpackDocsConfig = merge(
     },
   {
     entry: {
-      docs: [path.join(mainPath, 'src/docs/entry')],
+      docs: [path.join(mainPath, 'src/layout/entry')],
     },
     output: {
       path: path.join(mainPath, 'docs'),
@@ -26,7 +26,7 @@ const webpackDocsConfig = merge(
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: path.join(mainPath, 'src/docs/template.html'),
+        template: path.join(mainPath, 'src/layout/template.html'),
       }),
     ],
   },

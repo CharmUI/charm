@@ -1,7 +1,5 @@
 import Main from './main.mdx';
 
-import withRouteScroll from '../components/scroll';
-
 const rewritedComponents = {
   h1: (props) => {
     const { children } = props;
@@ -43,14 +41,14 @@ const contents = [
         ],
       },
     ],
-    component: withRouteScroll(<Main components={rewritedComponents} />),
+    component: <Main components={rewritedComponents} />,
   },
   {
     key: '2',
     path: '/about',
     name: 'About',
     lastUpdate: '22th November',
-    component: withRouteScroll(<Main components={rewritedComponents} />),
+    component: <Main components={rewritedComponents} />,
   },
 ];
 
