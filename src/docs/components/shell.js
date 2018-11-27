@@ -3,9 +3,11 @@ import { Helmet } from 'react-helmet';
 
 import Aside from './aside';
 import Footer from './footer';
+import Nav from './nav';
 
 const WithRouterFooter = withRouter(Footer);
 const WithRouterAside = withRouter(Aside);
+const WithRouterNav = withRouter(Nav);
 
 function Shell({ contents, children }) {
   return (
@@ -29,13 +31,7 @@ function Shell({ contents, children }) {
           </div>
         </div>
 
-        <nav className="nav">
-          <ul className="list--inline list--style-none">
-            <li className="text--secondary"><small className="small">v16.7.0</small></li>
-            <li className="text--secondary"><small className="small">Getting Started</small></li>
-            <li className="text--light"><small className="small">20th November</small></li>
-          </ul>
-        </nav>
+        <WithRouterNav contents={contents} />
 
         <WithRouterAside contents={contents} />
       </>

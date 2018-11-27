@@ -29,6 +29,7 @@ const contents = [
     path: '/',
     exact: true,
     name: 'Getting started',
+    lastUpdate: '20th November',
     content: [
       {
         key: '1.1',
@@ -55,6 +56,7 @@ const contents = [
     path: '/about',
     name: 'About',
     hashPath: '/#about',
+    lastUpdate: '22th November',
     component: () => <WithRouterScroll><Main components={rewritedComponents} /></WithRouterScroll>,
   },
 ];

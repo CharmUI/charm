@@ -1,4 +1,7 @@
 import { Fragment } from 'react';
+
+import Package from '../../../package.json';
+
 import Link from './link';
 
 // Contstructs aside nav links from Array of paths
@@ -44,7 +47,7 @@ function Aside(props) {
   return (
     <div className="aside">
       <div className="aside__logo">
-        <small className="small text--bold">React Library</small>
+        <small className="small text--bold">{ Package.name }</small>
       </div>
 
       { getContentPaths(updatedContent) }
