@@ -33,35 +33,3 @@
     font-weight: 500;
   }
 }
-
-.list--aside {
-
-  & ol,
-  & ul {
-    padding-left: 22px;
-  }
-
-  & li {
-    position: relative;
-
-    &::before {
-      content: '—';
-      position: absolute;
-      display: inline-block;
-      width: 22px;
-      height: auto;
-
-      left: -22px;
-      top: 0;
-      line-height: 33px;
-      text-align: left;
-
-      background-color: transparent;
-      color: var(--color-fontSecondary-light);
-
-      @media (min-width: 576px) {
-        left: -22px;
-      }
-    }
-  }
-}

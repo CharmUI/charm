@@ -12,7 +12,7 @@ function Link({
       <NavLink
         to={path}
         exact={exact || false}
-        className="link link_main"
+        className="link_main"
         activeClassName="is-active"
       >
         { name }
@@ -29,7 +29,7 @@ function HashLink({
     <li>
       <NavHashLink
         to={path}
-        className="link link_main link_small"
+        className="link_main link_small"
         activeClassName="is-active"
       >
         { name }

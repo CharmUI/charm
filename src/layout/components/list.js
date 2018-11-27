@@ -12,8 +12,8 @@ function List(props) {
     <ul
       className={
         isInner
-          ? 'list--aside margin-bottom--1'
-          : 'list--aside'
+          ? 'aside__list margin-bottom--1'
+          : 'aside__list'
       }
     >
       { links.map((linkProps) => {
