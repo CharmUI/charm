@@ -10,6 +10,7 @@ export default function Content() {
     <Shell contents={contents}>
       { contents.map(content => (
         <MdContent
+          key={content.bullet}
           {...content}
           component={withRouteScroll(content.component)}
         />

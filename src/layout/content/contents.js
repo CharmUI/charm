@@ -17,24 +17,24 @@ const rewritedComponents = {
 
 const contents = [
   {
-    key: '1',
+    bullet: '1',
     path: '/',
     exact: true,
     name: 'Getting started',
     lastUpdate: '20th November',
     content: [
       {
-        key: '1.1',
+        bullet: '1.1',
         path: '/#try-react',
         name: 'Try React',
         content: [
           {
-            key: '1.1.1',
+            bullet: '1.1.1',
             path: '/#more-on-react',
             name: 'More on react',
           },
           {
-            key: '1.1.2',
+            bullet: '1.1.2',
             path: '/#learn-react',
             name: 'Learn React',
           },
@@ -44,7 +44,7 @@ const contents = [
     component: <Main components={rewritedComponents} />,
   },
   {
-    key: '2',
+    bullet: '2',
     path: '/about',
     name: 'About',
     lastUpdate: '22th November',

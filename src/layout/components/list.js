@@ -13,13 +13,13 @@ function List({ links, isInner }) {
     >
       { links.map((link) => {
         const {
-          key,
+          bullet,
           content,
           isCurrentPath = false,
         } = link;
 
         return (
-          <Fragment key={key}>
+          <Fragment key={bullet}>
             <Link {...link} isHashed={isInner} />
             { content && (isCurrentPath || isInner)
               ? (
