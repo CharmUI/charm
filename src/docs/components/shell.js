@@ -21,7 +21,7 @@ function Shell({ contents, children }) {
 
         <div className="layout">
           <main className="content">
-            {children}
+            { children }
           </main>
 
           <div className="content">

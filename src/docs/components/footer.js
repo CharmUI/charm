@@ -22,7 +22,7 @@ function Footer({ contents, location, history }) {
               onClick={() => onClickHandler(prevRoute.path)}
               path={prevRoute.path}
             >
-              {prevRoute.name}
+              { prevRoute.name }
             </FooterButton>
           )
           : <div />
@@ -35,7 +35,7 @@ function Footer({ contents, location, history }) {
               path={nextRoute.path}
               isRight
             >
-              {nextRoute.name}
+              { nextRoute.name }
             </FooterButton>
           )
           : <div />

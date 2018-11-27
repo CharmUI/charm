@@ -7,11 +7,11 @@ import contents from './content/contents';
 export default function Content() {
   return (
     <Shell contents={contents}>
-      {contents.map(content => (
+      { contents.map(content => (
         <MdContent
           {...content}
         />
-      ))}
+      )) }
     </Shell>
   );
 }

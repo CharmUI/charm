@@ -1,12 +1,6 @@
-import { withRouter } from 'react-router-dom';
-
-import { Lead } from 'Components/index';
-
 import Main from './main.mdx';
 
-import ScrollToTop from '../components/scroll';
-
-const WithRouterScroll = withRouter(ScrollToTop);
+import withRouteScroll from '../components/scroll';
 
 const rewritedComponents = {
   h1: (props) => {
@@ -14,10 +8,10 @@ const rewritedComponents = {
 
     return (
       <h1 {...props}>
-        {children}
-        <Lead>
+        { children }
+        <p className="lead text--light margin-top--1">
           This page is an overview of the React documentation and related resources.
-        </Lead>
+        </p>
       </h1>
     );
   },
@@ -49,15 +43,14 @@ const contents = [
         ],
       },
     ],
-    component: () => <WithRouterScroll><Main components={rewritedComponents} /></WithRouterScroll>,
+    component: withRouteScroll(<Main components={rewritedComponents} />),
   },
   {
     key: '2',
     path: '/about',
     name: 'About',
-    hashPath: '/#about',
     lastUpdate: '22th November',
-    component: () => <WithRouterScroll><Main components={rewritedComponents} /></WithRouterScroll>,
+    component: withRouteScroll(<Main components={rewritedComponents} />),
   },
 ];
 

@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 function Button({ onClick, children, isRight }) {
   return (
     <button
@@ -12,12 +14,12 @@ function Button({ onClick, children, isRight }) {
       { isRight ? 'Next' : 'Previsous' }
       <br />
       <span className="text--blue">
-        {isRight
+        { isRight
           ? null
           : '— '
         }
-        {children}
-        {isRight
+        { children }
+        { isRight
           ? ' —'
           : null
         }
@@ -38,4 +40,4 @@ Button.propTypes = {
   onClick: PropTypes.func,
 };
 
-export default Button;
+export default memo(Button);

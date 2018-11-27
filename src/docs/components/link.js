@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { NavLink } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
 
@@ -47,4 +48,4 @@ Link.propTypes = {
   exact: PropTypes.bool,
 };
 
-export default Link;
+export default memo(Link);
