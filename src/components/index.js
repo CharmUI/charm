@@ -1,5 +1,5 @@
-import Heading from './Heading';
+import Lead from './Lead';
 
 export {
-  Heading,
+  Lead,
 };
