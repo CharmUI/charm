@@ -1,8 +1,11 @@
-import { HashRouter as Router } from 'react-router-dom';
+import { HashRouter as Router, withRouter } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 import Aside from './aside';
 import Footer from './footer';
+
+const WithRouterFooter = withRouter(Footer);
+const WithRouterAside = withRouter(Aside);
 
 function Shell({ contents, children }) {
   return (
@@ -22,7 +25,7 @@ function Shell({ contents, children }) {
           <div className="content">
             <hr />
 
-            <Footer contents={contents} />
+            <WithRouterFooter contents={contents} />
           </div>
         </div>
 
@@ -34,7 +37,7 @@ function Shell({ contents, children }) {
           </ul>
         </nav>
 
-        <Aside contents={contents} />
+        <WithRouterAside contents={contents} />
       </>
     </Router>
   );

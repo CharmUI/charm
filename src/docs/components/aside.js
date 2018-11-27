@@ -1,55 +1,45 @@
-import { NavLink } from 'react-router-dom';
-import { NavHashLink } from 'react-router-hash-link';
+import { Fragment } from 'react';
+import Link from './link';
 
 // Contstructs aside nav links from Array of paths
 function getContentPaths(paths, isInner = false) {
-  return paths.map((innerContent, i) => (
+  return (
     <ul
-      key={i}
       className={
         isInner
-          ? 'list--aside'
-          : 'list--aside margin-bottom--1'
+          ? 'list--aside margin-bottom--1'
+          : 'list--aside'
       }
     >
-      <>
-        {isInner
-          ? (
-            <li>
-              <NavHashLink
-                to={innerContent.path}
-                className="link link_main link_small"
-              >
-                { innerContent.name }
-              </NavHashLink>
-            </li>
-          )
-          : (
-            <li className="list-item--style-none">
-              <NavLink
-                to={innerContent.path}
-                exact={innerContent.exact || false}
-                className="link link_main"
-                activeClassName="is-active"
-              >
-                { innerContent.name }
-              </NavLink>
-            </li>
-          )
-        }
-        { innerContent.paths
-          ? (
-            <li className="list-item--style-none">{ getContentPaths(innerContent.paths, true) }</li>
-          )
-          : null
-        }
-      </>
+      { paths.map((props) => {
+        const {
+          key,
+          content,
+          isCurrentPath = false,
+        } = props;
+
+        return (
+          <Fragment key={key}>
+            <Link {...props} isHashed={isInner} />
+            { content && (isCurrentPath || isInner)
+              ? (
+                <li className="list-item--style-none">{ getContentPaths(content, true) }</li>
+              )
+              : null
+            }
+          </Fragment>
+        );
+      })}
     </ul>
-  ));
+  );
 }
 
 function Aside(props) {
-  const { contents } = props;
+  const { contents, location } = props;
+
+  const updatedContent = contents.map(content => Object.assign({}, content, {
+    isCurrentPath: location.pathname === content.path,
+  }));
 
   return (
     <div className="aside">
@@ -57,17 +47,19 @@ function Aside(props) {
         <small className="small text--bold">React Library</small>
       </div>
 
-      { getContentPaths(contents) }
+      { getContentPaths(updatedContent) }
     </div>
   );
 }
 
 Aside.defaultProps = {
   contents: [],
+  location: null,
 };
 
 Aside.propTypes = {
   contents: PropTypes.arrayOf(PropTypes.shape()),
+  location: PropTypes.shape(),
 };
 
 export default Aside;

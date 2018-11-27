@@ -1,5 +1,12 @@
+import { withRouter } from 'react-router-dom';
+
 import Main from './main.mdx';
+
 import { Lead } from '../../components/index';
+
+import ScrollToTop from '../components/scroll';
+
+const WithRouterScroll = withRouter(ScrollToTop);
 
 const rewritedComponents = {
   h1: (props) => {
@@ -16,49 +23,40 @@ const rewritedComponents = {
   },
 };
 
-const routes = [
-  {
-    key: 1,
-    path: '/',
-    exact: true,
-    component: () => <Main components={rewritedComponents} />,
-  },
-  {
-    key: 2,
-    path: '/about',
-    component: () => <Main components={rewritedComponents} />,
-  },
-];
-
 const contents = [
   {
+    key: '1',
     path: '/',
-    name: 'Getting started',
     exact: true,
-    paths: [
+    name: 'Getting started',
+    content: [
       {
+        key: '1.1',
         path: '/#try-react',
         name: 'Try React',
-        paths: [
+        content: [
           {
+            key: '1.1.1',
             path: '/#more-on-react',
             name: 'More on react',
           },
           {
+            key: '1.1.2',
             path: '/#learn-react',
             name: 'Learn React',
           },
         ],
       },
     ],
+    component: () => <WithRouterScroll><Main components={rewritedComponents} /></WithRouterScroll>,
   },
   {
+    key: '2',
     path: '/about',
     name: 'About',
+    hashPath: '/#about',
+    component: () => <WithRouterScroll><Main components={rewritedComponents} /></WithRouterScroll>,
   },
 ];
 
-export {
-  routes,
-  contents,
-};
+export default contents;

@@ -1,44 +1,4 @@
-import { withRouter } from 'react-router-dom';
-
-function FooterButton({ onClick, route, isRight }) {
-  return (
-    <button
-      onClick={() => onClick(route.path)}
-      type="button"
-      className={
-        isRight
-          ? 'text--right'
-          : ''
-      }
-    >
-      { isRight ? 'Next' : 'Previsous' }
-      <br />
-      <span className="text--blue">
-        {isRight
-          ? null
-          : '— '
-        }
-        {route.name}
-        {isRight
-          ? ' —'
-          : null
-        }
-      </span>
-    </button>
-  );
-}
-
-FooterButton.defaultProps = {
-  route: null,
-  isRight: false,
-  onClick: null,
-};
-
-FooterButton.propTypes = {
-  route: PropTypes.shape(),
-  isRight: PropTypes.bool,
-  onClick: PropTypes.func,
-};
+import FooterButton from './button';
 
 function Footer({ contents, location, history }) {
   const contentIndex = contents.reduce((acc, content, i) => {
@@ -58,14 +18,25 @@ function Footer({ contents, location, history }) {
       <footer className="display--flex justify-content--between">
         { prevRoute
           ? (
-            <FooterButton onClick={onClickHandler} route={prevRoute} />
+            <FooterButton
+              onClick={() => onClickHandler(prevRoute.path)}
+              path={prevRoute.path}
+            >
+              {prevRoute.name}
+            </FooterButton>
           )
           : <div />
         }
 
         { nextRoute
           ? (
-            <FooterButton onClick={onClickHandler} route={nextRoute} isRight />
+            <FooterButton
+              onClick={() => onClickHandler(nextRoute.path)}
+              path={nextRoute.path}
+              isRight
+            >
+              {nextRoute.name}
+            </FooterButton>
           )
           : <div />
         }
@@ -86,4 +57,4 @@ Footer.propTypes = {
   history: PropTypes.shape(),
 };
 
-export default withRouter(Footer);
+export default Footer;
