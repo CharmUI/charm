@@ -11,7 +11,7 @@ function Button({ onClick, children, isRight }) {
           : ''
       }
     >
-      { isRight ? 'Next' : 'Previsous' }
+      { isRight ? 'Next' : 'Previous' }
       <br />
       <span className="text--blue">
         { isRight

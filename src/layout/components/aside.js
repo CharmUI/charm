@@ -2,9 +2,7 @@ import Package from 'Root/package.json';
 
 import List from './list';
 
-function Aside(props) {
-  const { contents, location } = props;
-
+function Aside({ contents, location }) {
   const updatedContent = contents.map(content => Object.assign({}, content, {
     isCurrentPath: location.pathname === content.path,
   }));

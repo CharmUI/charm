@@ -1,20 +1,49 @@
-import { Route as MdContent } from 'react-router-dom';
+import {
+  HashRouter as Router,
+  Route as Content,
+  withRouter,
+} from 'react-router-dom';
 
-import Shell from './components/shell';
-import withRouteScroll from './components/scroll';
+import { Helmet } from 'react-helmet';
+
+import {
+  withRouteScroll,
+  Shell,
+  Footer,
+  Aside,
+  Nav,
+} from './components';
 
 import contents from './content/contents';
 
-export default function Content() {
+const WithRouterFooter = withRouter(Footer);
+const WithRouterAside = withRouter(Aside);
+const WithRouterNav = withRouter(Nav);
+
+export default function App() {
   return (
-    <Shell contents={contents}>
-      { contents.map(content => (
-        <MdContent
-          key={content.bullet}
-          {...content}
-          component={withRouteScroll(content.component)}
-        />
-      )) }
-    </Shell>
+    <Router>
+      <>
+        <Helmet>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+          <title>Charm</title>
+        </Helmet>
+
+        <Shell
+          footer={<WithRouterFooter contents={contents} />}
+          aside={<WithRouterAside contents={contents} />}
+          nav={<WithRouterNav contents={contents} />}
+        >
+          { contents.map(content => (
+            <Content
+              key={content.bullet}
+              {...content}
+              component={withRouteScroll(content.component)}
+            />
+          )) }
+        </Shell>
+      </>
+    </Router>
   );
 }
