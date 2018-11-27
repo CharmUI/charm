@@ -2,6 +2,7 @@ import { HashRouter as Router } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 import Aside from './aside';
+import Footer from './footer';
 
 function Shell({ contents, children }) {
   return (
@@ -14,24 +15,14 @@ function Shell({ contents, children }) {
         </Helmet>
 
         <div className="layout">
-          {children}
+          <main className="content">
+            {children}
+          </main>
 
           <div className="content">
             <hr />
 
-            <div className="display--flex justify-content--between">
-              <button type="button">
-                Previous
-                <br />
-                <span className="text--blue">— Contents</span>
-              </button>
-
-              <button type="button" className="text--right">
-                <span className="text--secondary">Next</span>
-                <br />
-                <span className="text--blue">Contributions —</span>
-              </button>
-            </div>
+            <Footer contents={contents} />
           </div>
         </div>
 

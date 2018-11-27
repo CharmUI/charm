@@ -7,13 +7,11 @@ import { routes, contents } from './content/contents';
 export default function Content() {
   return (
     <Shell contents={contents}>
-      <div className="content">
-        {routes.map(content => (
-          <MdContent
-            {...content}
-          />
-        ))}
-      </div>
+      {routes.map(content => (
+        <MdContent
+          {...content}
+        />
+      ))}
     </Shell>
   );
 }
