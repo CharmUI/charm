@@ -3,20 +3,20 @@ import {
   withRouter,
 } from 'react-router-dom';
 
-import Package from 'Root/package.json';
-
-import getLink from './Link';
-import withRouteScroll from './Scroll';
-
-import contents from './content/contents';
-
 import {
   Shell,
   Footer,
   Aside,
   Nav,
   List,
-} from './components';
+} from 'Layout';
+
+import Package from 'Root/package.json';
+
+import getLink from './Link';
+import withRouteScroll from './Scroll';
+
+import contents from './content/contents';
 
 import {
   getUpdatedContent,
