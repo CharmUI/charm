@@ -1,4 +1,4 @@
-import './css/all.css';
+import 'Layout/css/all.css';
 import 'Tags/all.css';
 
 import { HashRouter as Router } from 'react-router-dom';
