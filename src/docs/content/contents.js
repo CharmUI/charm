@@ -1,4 +1,3 @@
-// pages
 import Main from './main.mdx';
 import { Lead } from '../../components/index';
 
@@ -31,4 +30,35 @@ const routes = [
   },
 ];
 
-export default routes;
+const contents = [
+  {
+    path: '/',
+    name: 'Getting started',
+    exact: true,
+    paths: [
+      {
+        path: '/#try-react',
+        name: 'Try React',
+        paths: [
+          {
+            path: '/#more-on-react',
+            name: 'More on react',
+          },
+          {
+            path: '/#learn-react',
+            name: 'Learn React',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    path: '/about',
+    name: 'About',
+  },
+];
+
+export {
+  routes,
+  contents,
+};

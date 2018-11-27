@@ -1,14 +1,14 @@
 import { Route as MdContent } from 'react-router-dom';
 
-import contents from './content/contents';
+import Shell from './components/shell';
 
-import Shell from './Shell';
+import { routes, contents } from './content/contents';
 
 export default function Content() {
   return (
-    <Shell>
+    <Shell contents={contents}>
       <div className="content">
-        {contents.map(content => (
+        {routes.map(content => (
           <MdContent
             {...content}
           />

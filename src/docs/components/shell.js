@@ -1,8 +1,9 @@
-import { HashRouter as Router, NavLink } from 'react-router-dom';
-import { NavHashLink } from 'react-router-hash-link';
+import { HashRouter as Router } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
-function Shell({ children }) {
+import Aside from './aside';
+
+function Shell({ contents, children }) {
   return (
     <Router>
       <>
@@ -42,39 +43,19 @@ function Shell({ children }) {
           </ul>
         </nav>
 
-        <div className="aside">
-          <div className="aside__logo">
-            <small className="small text--bold">React Library</small>
-          </div>
-
-          <ul className="list--aside">
-            <li className="list-item--style-none">
-              <NavLink to="/" exact className="link link_main" activeClassName="is-active">Getting started</NavLink>
-            </li>
-            <li className="list-item--style-none">
-              <ul className="list--aside margin-bottom--1">
-                <li><NavHashLink to="/#try-react" className="link link_main link_small">Try React</NavHashLink></li>
-                <li className="list-item--style-none">
-                  <ul className="list--aside">
-                    <li><NavHashLink to="/#more-on-react" className="link link_main link_small">More on react</NavHashLink></li>
-                    <li><NavHashLink to="/#learn-react" className="link link_main link_small">Learn react</NavHashLink></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <NavLink to="/about" className="link link_main" activeClassName="is-active">About</NavLink>
-          </ul>
-        </div>
+        <Aside contents={contents} />
       </>
     </Router>
   );
 }
 
 Shell.defaultProps = {
+  contents: [],
   children: null,
 };
 
 Shell.propTypes = {
+  contents: PropTypes.arrayOf(PropTypes.shape()),
   children: PropTypes.node,
 };
 
