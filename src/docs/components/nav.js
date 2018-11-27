@@ -1,4 +1,4 @@
-import Package from '../../../package.json';
+import Package from 'Root/package.json';
 
 function Nav({ contents, location }) {
   const currentRoute = contents.reduce((acc, content) => {

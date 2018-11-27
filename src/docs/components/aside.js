@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 
-import Package from '../../../package.json';
+import Package from 'Root/package.json';
 
 import Link from './link';
 

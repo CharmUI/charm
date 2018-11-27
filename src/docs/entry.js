@@ -1,5 +1,5 @@
 import './css/all.css';
-import '../css/tags/all.css';
+import 'Tags/all.css';
 
 import { hot } from 'react-hot-loader';
 import ReactDOM from 'react-dom';

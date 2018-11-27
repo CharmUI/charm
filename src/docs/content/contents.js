@@ -1,8 +1,8 @@
 import { withRouter } from 'react-router-dom';
 
-import Main from './main.mdx';
+import { Lead } from 'Components/index';
 
-import { Lead } from '../../components/index';
+import Main from './main.mdx';
 
 import ScrollToTop from '../components/scroll';
 
