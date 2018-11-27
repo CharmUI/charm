@@ -1,13 +1,13 @@
 import Aside from './aside';
 import Footer from './footer';
 import Nav from './nav';
-import Shell from './shell';
+import Layout from './layout';
 import List from './list';
 
 export {
   Aside,
   Footer,
   Nav,
-  Shell,
+  Layout,
   List,
 };

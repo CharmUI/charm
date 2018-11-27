@@ -4,7 +4,7 @@ import {
 } from 'react-router-dom';
 
 import {
-  Shell,
+  Layout,
   Footer,
   Aside,
   Nav,
@@ -13,8 +13,8 @@ import {
 
 import Package from 'Root/package.json';
 
-import getLink from './Link';
-import withRouteScroll from './Scroll';
+import getLink from './components/Link';
+import withRouteScroll from './components/Scroll';
 
 import contents from './content/contents';
 
@@ -30,7 +30,7 @@ function App({ location, history }) {
   const prevRoute = contents[currentContentIndex - 1];
   const nextRoute = contents[currentContentIndex + 1];
 
-  const ShellAside = (
+  const LayoutAside = (
     <Aside
       logo={Package.name}
       nav={(
@@ -43,7 +43,7 @@ function App({ location, history }) {
     />
   );
 
-  const ShellNav = (
+  const LayoutNav = (
     <Nav
       title={currentRoute.name}
       lastUpdate={currentRoute.lastUpdate}
@@ -51,7 +51,7 @@ function App({ location, history }) {
     />
   );
 
-  const ShellFooter = (
+  const LayoutFooter = (
     <Footer
       prevRoute={prevRoute}
       nextRoute={nextRoute}
@@ -60,10 +60,10 @@ function App({ location, history }) {
   );
 
   return (
-    <Shell
-      aside={ShellAside}
-      nav={ShellNav}
-      footer={ShellFooter}
+    <Layout
+      aside={LayoutAside}
+      nav={LayoutNav}
+      footer={LayoutFooter}
     >
       { contents.map(content => (
         <Content
@@ -72,7 +72,7 @@ function App({ location, history }) {
           component={withRouteScroll(content.component)}
         />
       )) }
-    </Shell>
+    </Layout>
   );
 }
 

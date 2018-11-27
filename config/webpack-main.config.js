@@ -38,7 +38,6 @@ const webpackConfig = {
     extensions: ['.css', '.js', '.mdx'],
     alias: {
       Root: path.join(mainPath),
-      Components: path.join(mainPath, 'src/components/'),
       Layout: path.join(mainPath, 'src/layout/'),
       Classes: path.join(mainPath, 'src/css/classes/'),
       Tags: path.join(mainPath, 'src/css/tags/'),

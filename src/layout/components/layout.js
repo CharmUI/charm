@@ -1,4 +1,4 @@
-function Shell({
+function Layout({
   children,
   footer,
   aside,
@@ -25,18 +25,18 @@ function Shell({
   );
 }
 
-Shell.defaultProps = {
+Layout.defaultProps = {
   children: null,
   footer: null,
   aside: null,
   nav: null,
 };
 
-Shell.propTypes = {
+Layout.propTypes = {
   children: PropTypes.node,
   footer: PropTypes.element,
   aside: PropTypes.element,
   nav: PropTypes.element,
 };
 
-export default Shell;
+export default Layout;
