@@ -31,5 +31,6 @@
   &_small {
     font-size: 12px;
     font-weight: 500;
+    color: var(--color-fontSecondary-70);
   }
 }
