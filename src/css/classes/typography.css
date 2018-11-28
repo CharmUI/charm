@@ -24,8 +24,9 @@
   margin-left: -33px;
   margin-right: -22px;
 
-  font-size: 12px;
+  font-size: 13px;
 
+  color: var(--color-fontMain);
   background-color: var(--color-bgYellow);
 
   @media (min-width: 576px) {
