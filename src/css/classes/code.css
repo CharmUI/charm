@@ -2,7 +2,7 @@
   display: block;
   max-width: 594px;
 
-  padding: 22px 11px 22px 22px !important;
+  padding: 22px 22px 22px 33px;
 
   margin: 22px 0;
   margin-left: -33px;
@@ -15,7 +15,7 @@
   background-color: var(--color-bgCode);
 
   @media (min-width: 576px) {
-    padding: 11px 22px !important;
+    padding: 11px 22px;
     margin-right: -22px;
     margin-left: -22px;
     border-radius: 2px;

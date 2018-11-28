@@ -3,6 +3,8 @@ import './css/all.css';
 import 'Layout/layout.css';
 import 'Tags/all.css';
 
+import 'Static/images/1.jpg';
+
 import { HashRouter as Router } from 'react-router-dom';
 import { hot } from 'react-hot-loader';
 import ReactDOM from 'react-dom';

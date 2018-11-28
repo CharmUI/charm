@@ -18,18 +18,21 @@
 .blockquote {
   max-width: 594px;
 
-  padding: 22px 11px 22px 22px;
+  padding: 22px 22px 22px 33px;
 
   margin: 22px 0;
-  margin-left: -22px;
-  margin-right: -11px;
+  margin-left: -33px;
+  margin-right: -22px;
 
   font-size: 12px;
 
   background-color: var(--color-bgYellow);
 
   @media (min-width: 576px) {
-    padding: 22px;
+    padding: 22px 22px 22px 33px;
     margin-right: -22px;
+    margin-left: -22px;
+
+    border-radius: 2px;
   }
 }
