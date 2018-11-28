@@ -5,7 +5,7 @@ function Nav({
 }) {
   return (
     <nav className="nav">
-      <ul className="list--inline list--style-none">
+      <ul className="list list--inline list--style-none">
         { version && <li className="text--secondary"><small className="small">{ `v${version}` }</small></li> }
         { title && <li className="text--secondary"><small className="small">{ title }</small></li> }
         { lastUpdate && <li className="text--light"><small className="small">{ lastUpdate }</small></li> }

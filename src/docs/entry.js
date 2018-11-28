@@ -1,6 +1,5 @@
 import 'highlight.js/styles/tomorrow-night.css';
 import './css/all.css';
-import 'Layout/layout.css';
 import 'Tags/all.css';
 
 import 'Static/images/1.jpg';

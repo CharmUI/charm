@@ -11,6 +11,13 @@
   }
 }
 
+.footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
 .layout {
   width: 100%;
 

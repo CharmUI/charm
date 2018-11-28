@@ -4,10 +4,11 @@ function Footer({
   onClickHandler,
 }) {
   return (
-    <footer className="display--flex justify-content--between">
+    <footer className="footer">
       { prevRoute
         ? (
           <button
+            className="button"
             type="button"
             onClick={() => onClickHandler(prevRoute.path)}
           >
@@ -25,9 +26,9 @@ function Footer({
       { nextRoute
         ? (
           <button
+            className="button text--right"
             type="button"
             onClick={() => onClickHandler(nextRoute.path)}
-            className="text--right"
           >
             Next
             <br />
