@@ -29,7 +29,7 @@
   background-color: var(--color-bgYellow);
 
   @media (min-width: 576px) {
-    padding: 22px 22px 22px 33px;
+    padding: 22px;
     margin-right: -22px;
     margin-left: -22px;
 
