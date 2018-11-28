@@ -14,6 +14,7 @@
   --color-bgMain: rgba(250, 250, 250, 1);
   --color-bgYellow: rgba(255, 224, 102, 0.1);
   --color-bgBlack: rgba(32, 32, 32, 1);
+  --color-bgCode: rgba(40, 44, 52, 1);
 
   /* Size */
   --size-font-main: 14px;
