@@ -1,3 +1,71 @@
+/* Tomorrow Night Theme */
+
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+
+/* Tomorrow Comment */
+
+.hljs-comment, .hljs-quote {
+    color: #969896;
+}
+
+/* Tomorrow Red */
+
+.hljs-variable, .hljs-template-variable, .hljs-tag, .hljs-name,
+.hljs-selector-id, .hljs-selector-class, .hljs-regexp, .hljs-deletion {
+    color: #c66;
+}
+
+/* Tomorrow Orange */
+
+.hljs-number, .hljs-built_in, .hljs-builtin-name, .hljs-literal, .hljs-type,
+.hljs-params, .hljs-meta, .hljs-link {
+    color: #de935f;
+}
+
+/* Tomorrow Yellow */
+
+.hljs-attribute {
+    color: #f0c674;
+}
+
+/* Tomorrow Green */
+
+.hljs-string, .hljs-symbol, .hljs-bullet, .hljs-addition {
+    color: #b5bd68;
+}
+
+/* Tomorrow Blue */
+
+.hljs-title, .hljs-section {
+    color: #81a2be;
+}
+
+/* Tomorrow Purple */
+
+.hljs-keyword, .hljs-selector-tag {
+    color: #b294bb;
+}
+
+.hljs {
+    display: block;
+    overflow-x: auto;
+    background: #1d1f21;
+    color: #c5c8c6;
+    padding: .5em;
+}
+
+.hljs-emphasis {
+    font-style: italic;
+}
+
+.hljs-strong {
+    font-weight: bold;
+}
+
 @font-face {
     font-family: 'Inter UI';
     font-style: normal;
@@ -34,6 +102,28 @@
          url(Inter-UI-Bold.ttf) format('truetype');
 }
 
+.hljs {
+    display: block;
+    max-width: 594px;
+    padding: 22px 22px 22px 33px;
+    margin: 22px 0;
+    margin-left: -33px;
+    margin-right: -22px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+    background-color: var(--color-bgCode);
+}
+
+@media (min-width: 576px) {
+    .hljs {
+        padding: 22px 22px;
+        margin-right: -22px;
+        margin-left: -22px;
+        border-radius: 2px;
+    }
+}
+
 .content {
     width: 100%;
     max-width: 715px;
@@ -50,12 +140,12 @@
 
 .layout {
     width: 100%;
-    padding: 155px 0 44px;
+    padding: 154px 0 22px;
 }
 
 @media (min-width: 992px) {
     .layout {
-        padding: 165px 0 44px 418px;
+        padding: 165px 0 22px 418px;
     }
 }
 
@@ -108,6 +198,34 @@
     }
 }
 
+.aside__list ol, .aside__list ul {
+    padding-left: 22px;
+}
+
+.aside__list li {
+    position: relative;
+}
+
+.aside__list li::before {
+    content: '\2014';
+    position: absolute;
+    display: inline-block;
+    width: 22px;
+    height: auto;
+    left: -22px;
+    top: 0;
+    line-height: 33px;
+    text-align: left;
+    background-color: transparent;
+    color: var(--color-fontSecondary-light);
+}
+
+@media (min-width: 576px) {
+    .aside__list li::before {
+        left: -22px;
+    }
+}
+
 :root {
     --font-stack: 'Inter UI',
                   -apple-system,
@@ -132,6 +250,8 @@
     --color-fontSecondary-70: rgba(74, 74, 74, .7);
     --color-bgMain: rgba(250, 250, 250, 1);
     --color-bgYellow: rgba(255, 224, 102, .1);
+    --color-bgBlack: rgba(32, 32, 32, 1);
+    --color-bgCode: rgba(40, 44, 52, 1);
     /* Size */
     --size-font-main: 14px;
     --size-fontLH-main: 22px;
@@ -415,35 +535,6 @@ a:hover {
     font-weight: 500;
 }
 
-.list--aside ol, .list--aside ul {
-    padding-left: 22px;
-}
-
-.list--aside li {
-    position: relative;
-}
-
-.list--aside li::before {
-    content: '\2014';
-    position: absolute;
-    display: inline-block;
-    width: 22px;
-    height: auto;
-    left: -22px;
-    top: 0;
-    line-height: 33px;
-    text-align: left;
-    background-color: transparent;
-    color: rgba(155, 155, 155, 1);
-    color: var(--color-fontSecondary-light);
-}
-
-@media (min-width: 576px) {
-    .list--aside li::before {
-        left: -22px;
-    }
-}
-
 hr {
     margin-top: 0;
     margin-bottom: 21px;
@@ -463,10 +554,10 @@ small {
 
 blockquote {
     max-width: 594px;
-    padding: 22px 11px 22px 22px;
+    padding: 22px 22px 22px 33px;
     margin: 22px 0;
-    margin-left: -22px;
-    margin-right: -11px;
+    margin-left: -33px;
+    margin-right: -22px;
     font-size: 12px;
     background-color: rgba(255, 224, 102, .1);
     background-color: var(--color-bgYellow);
@@ -474,8 +565,10 @@ blockquote {
 
 @media (min-width: 576px) {
     blockquote {
-        padding: 22px;
+        padding: 22px 22px 22px 33px;
         margin-right: -22px;
+        margin-left: -22px;
+        border-radius: 2px;
     }
 }
 
@@ -583,5 +676,35 @@ button.disabled, button:disabled {
 
 button:not(:disabled):not(.disabled) {
     cursor: pointer;
+}
+
+code {
+    display: block;
+    max-width: 594px;
+    padding: 22px 22px 22px 33px;
+    margin: 22px 0;
+    margin-left: -33px;
+    margin-right: -22px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+    background-color: rgba(40, 44, 52, 1);
+    background-color: var(--color-bgCode);
+}
+
+@media (min-width: 576px) {
+    code {
+        padding: 22px 22px;
+        margin-right: -22px;
+        margin-left: -22px;
+        border-radius: 2px;
+    }
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+    margin: 11px 0;
+    border-radius: 2px;
 }
 
