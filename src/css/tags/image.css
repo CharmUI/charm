@@ -1,6 +1,14 @@
 img {
   display: inline-block;
   max-width: 100%;
+  max-width: calc(100% + 55px);
+  margin-left: -33px;
 
-  border-radius: 2px;
+  @media (min-width: 576px) {
+    max-width: 100%;
+    max-width: calc(100% + 44px);
+    margin-left: -22px;
+  
+    border-radius: 2px;
+  }
 }
