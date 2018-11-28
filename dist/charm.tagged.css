@@ -20,7 +20,7 @@
     --color-fontSecondary: rgba(74, 74, 74, 1);
     --color-fontSecondary-light: rgba(155, 155, 155, 1);
     --color-fontSecondary-70: rgba(74, 74, 74, .7);
-    --color-bgMain: rgba(250, 250, 250, 1);
+    --color-bgMain: rgba(253, 253, 253, 1);
     --color-bgYellow: rgba(255, 224, 102, .1);
     --color-bgBlack: rgba(32, 32, 32, 1);
     --color-bgCode: rgba(40, 44, 52, 1);
@@ -242,7 +242,7 @@ body {
     color: rgba(33, 33, 33, 1);
     color: var(--color-fontBlack);
     text-align: left;
-    background-color: rgba(250, 250, 250, 1);
+    background-color: rgba(253, 253, 253, 1);
     background-color: var(--color-bgMain);
 }
 
@@ -340,7 +340,6 @@ blockquote {
         padding: 22px;
         margin-right: -22px;
         margin-left: -22px;
-        border-radius: 2px;
     }
 }
 
@@ -457,6 +456,7 @@ code {
     margin: 22px 0;
     margin-left: -33px;
     margin-right: -22px;
+    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
     font-size: 13px;
     font-weight: 500;
     color: #fff;
@@ -485,7 +485,6 @@ img {
         max-width: 100%;
         max-width: calc(100% + 44px);
         margin-left: -22px;
-        border-radius: 2px;
     }
 }
 
