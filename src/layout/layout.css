@@ -14,10 +14,10 @@
 .layout {
   width: 100%;
 
-  padding: 155px 0 44px;
+  padding: 154px 0 22px;
 
   @media (min-width: 992px) {
-    padding: 165px 0 44px 418px;
+    padding: 165px 0 22px 418px;
   }
 }
 

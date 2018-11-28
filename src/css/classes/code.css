@@ -1,0 +1,21 @@
+.code {
+  display: block;
+  max-width: 594px;
+
+  padding: 22px 11px 22px 22px;
+
+  margin: 33px 0;
+  margin-left: -22px;
+  margin-right: -11px;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  color: #fff;
+  background-color: var(--color-bgBlack);
+
+  @media (min-width: 576px) {
+    padding: 22px;
+    margin-right: -22px;
+  }
+}
