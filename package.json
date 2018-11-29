@@ -6,10 +6,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server -d --hot --config config/webpack-docs.config.js",
-    "build": "npm run build:ui && npm run build:docs && npm run clean:js && npm run build:esm && npm run build:commonjs",
+    "build": "npm run build:ui && npm run clean:js && npm run build:esm && npm run build:commonjs",
     "clean:js": "rm -r dist/charm.*.js",
     "build:ui": "NODE_ENV=production webpack --config config/webpack-build.config.js",
-    "build:docs": "NODE_ENV=production webpack --config config/webpack-docs.config.js",
     "build:esm": "BABEL_ENV=production,esm babel src --out-dir dist/esm --ignore '**/css','**/docs' --source-maps inline",
     "build:commonjs": "BABEL_ENV=production babel src --out-dir dist/commonjs --ignore '**/css','**/docs' --source-maps inline"
   },
