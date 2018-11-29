@@ -13,6 +13,14 @@
     "build:commonjs": "BABEL_ENV=production babel src --out-dir dist/commonjs --ignore '**/css','**/docs' --source-maps inline",
     "release": "np --no-publish"
   },
+  "keywords": [
+    "charm",
+    "ui",
+    "react"
+  ],
+  "engines": {
+    "node": ">=8"
+  },
   "dependencies": {
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
