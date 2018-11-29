@@ -27,7 +27,6 @@ const webpackConfig = {
       Classes: path.join(mainPath, 'src/css/classes/'),
       Tags: path.join(mainPath, 'src/css/tags/'),
       Custom: path.join(mainPath, 'src/css/shared/'),
-      Static: path.join(mainPath, 'src/docs/static/'),
     },
   },
   module: {
