@@ -8,8 +8,8 @@
     "build": "npm run build:ui && npm run clean:js && npm run build:esm && npm run build:commonjs",
     "clean:js": "rm -r dist/charm.*.js",
     "build:ui": "NODE_ENV=production webpack --config config/webpack-build.config.js",
-    "build:esm": "BABEL_ENV=production,esm babel src --out-dir dist/esm --ignore '**/css','**/docs' --source-maps inline",
-    "build:commonjs": "BABEL_ENV=production babel src --out-dir dist/commonjs --ignore '**/css','**/docs' --source-maps inline",
+    "build:esm": "BABEL_ENV=esm babel src --out-dir dist/esm --ignore '**/css','**/docs' --source-maps inline",
+    "build:commonjs": "BABEL_ENV=commonjs babel src --out-dir dist/commonjs --ignore '**/css','**/docs' --source-maps inline",
     "release": "np --no-publish"
   },
   "keywords": [
