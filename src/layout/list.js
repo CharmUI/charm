@@ -5,7 +5,6 @@ function List(props) {
     links,
     isInner,
     LinkComponent,
-    HashLinkComponent,
   } = props;
 
   return (
@@ -25,10 +24,7 @@ function List(props) {
 
         return (
           <Fragment key={bullet}>
-            { isInner
-              ? <HashLinkComponent {...linkProps} />
-              : <LinkComponent {...linkProps} />
-            }
+            <LinkComponent {...linkProps} />
             { content && (isCurrentPath || isInner)
               ? (
                 <li className="list-item--style-none">
@@ -52,14 +48,12 @@ List.defaultProps = {
   links: [],
   isInner: false,
   LinkComponent: null,
-  HashLinkComponent: null,
 };
 
 List.propTypes = {
   links: PropTypes.arrayOf(PropTypes.shape()),
   isInner: PropTypes.bool,
   LinkComponent: PropTypes.shape(),
-  HashLinkComponent: PropTypes.shape(),
 };
 
 export default List;
