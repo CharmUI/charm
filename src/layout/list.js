@@ -30,7 +30,7 @@ function List(props) {
             />
             { content && (isCurrentPath || isInner)
               ? (
-                <li className="list-item--style-none">
+                <li className={isInner ? '' : 'list-item--style-none'}>
                   <List
                     {...props}
                     links={content}
