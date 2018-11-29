@@ -24,13 +24,15 @@ function List(props) {
 
         return (
           <Fragment key={bullet}>
-            <LinkComponent
-              {...linkProps}
-              className={isInner ? 'link_small' : ''}
-            />
+            <li className={isInner ? '' : 'list-item--style-none'}>
+              <LinkComponent
+                {...linkProps}
+                className={isInner ? 'link_small' : ''}
+              />
+            </li>
             { content && (isCurrentPath || isInner)
               ? (
-                <li className={isInner ? '' : 'list-item--style-none'}>
+                <li className="list-item--style-none">
                   <List
                     {...props}
                     links={content}
