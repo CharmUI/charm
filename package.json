@@ -21,14 +21,15 @@
   "engines": {
     "node": ">=8"
   },
-  "dependencies": {
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3"
-  },
   "files": [
     "dist"
   ],
-  "peerDependencies": {},
+  "dependencies": {
+  },
+  "peerDependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.6",
