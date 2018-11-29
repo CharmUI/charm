@@ -103,125 +103,12 @@
 }
 
 .hljs {
-    display: block;
-    max-width: 594px;
     padding: 22px 22px 22px 33px;
-    margin: 22px 0;
-    margin-left: -33px;
-    margin-right: -22px;
-    font-size: 13px;
-    font-weight: 500;
-    color: #fff;
-    background-color: var(--color-bgCode);
 }
 
 @media (min-width: 576px) {
     .hljs {
         padding: 22px 22px;
-        margin-right: -22px;
-        margin-left: -22px;
-    }
-}
-
-.content {
-    width: 100%;
-    max-width: 715px;
-    padding: 0 22px 0 33px;
-    margin-bottom: 88px;
-}
-
-@media (min-width: 576px) {
-    .content {
-        padding: 0 99px 0 66px;
-        margin-bottom: 88px;
-    }
-}
-
-.layout {
-    width: 100%;
-    padding: 154px 0 22px;
-}
-
-@media (min-width: 992px) {
-    .layout {
-        padding: 165px 0 22px 418px;
-    }
-}
-
-.nav {
-    position: absolute;
-    height: 33px;
-    top: 33px;
-    left: auto;
-    padding: 0 22px 0 33px;
-}
-
-@media (min-width: 576px) {
-    .nav {
-        top: 44px;
-        padding: 0 99px 0 66px;
-    }
-}
-
-@media (min-width: 992px) {
-    .nav {
-        left: 418px;
-    }
-}
-
-.aside {
-    position: fixed;
-    display: none;
-    height: 100%;
-    width: 418px;
-    top: 0;
-    left: 0;
-    padding: 33px 0 44px 33px;
-}
-
-.aside__logo {
-    display: inline-block;
-    margin-bottom: 88px;
-}
-
-@media (min-width: 992px) {
-    .aside__logo {
-        margin-bottom: 231px;
-    }
-}
-
-@media (min-width: 992px) {
-    .aside {
-        display: block;
-        padding: 44px 0 44px 88px;
-    }
-}
-
-.aside__list ol, .aside__list ul {
-    padding-left: 22px;
-}
-
-.aside__list li {
-    position: relative;
-}
-
-.aside__list li::before {
-    content: '\2014';
-    position: absolute;
-    display: inline-block;
-    width: 22px;
-    height: auto;
-    left: -22px;
-    top: 0;
-    line-height: 33px;
-    text-align: left;
-    background-color: transparent;
-    color: var(--color-fontSecondary-light);
-}
-
-@media (min-width: 576px) {
-    .aside__list li::before {
-        left: -22px;
     }
 }
 
@@ -532,6 +419,116 @@ a:hover {
 .link_small {
     font-size: 12px;
     font-weight: 500;
+    color: rgba(74, 74, 74, .7);
+    color: var(--color-fontSecondary-70);
+}
+
+.content {
+    width: 100%;
+    max-width: 715px;
+    padding: 0 22px 0 33px;
+    margin-bottom: 88px;
+}
+
+@media (min-width: 576px) {
+    .content {
+        padding: 0 99px 0 66px;
+        margin-bottom: 88px;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.layout {
+    width: 100%;
+    padding: 154px 0 22px;
+}
+
+@media (min-width: 992px) {
+    .layout {
+        padding: 165px 0 22px 418px;
+    }
+}
+
+.nav {
+    position: absolute;
+    height: 33px;
+    top: 33px;
+    left: auto;
+    padding: 0 22px 0 33px;
+}
+
+@media (min-width: 576px) {
+    .nav {
+        top: 44px;
+        padding: 0 99px 0 66px;
+    }
+}
+
+@media (min-width: 992px) {
+    .nav {
+        left: 418px;
+    }
+}
+
+.aside {
+    position: fixed;
+    display: none;
+    height: 100%;
+    width: 418px;
+    top: 0;
+    left: 0;
+    padding: 33px 0 44px 33px;
+}
+
+.aside__logo {
+    display: inline-block;
+    margin-bottom: 88px;
+}
+
+@media (min-width: 992px) {
+    .aside__logo {
+        margin-bottom: 231px;
+    }
+}
+
+@media (min-width: 992px) {
+    .aside {
+        display: block;
+        padding: 44px 0 44px 88px;
+    }
+}
+
+.aside__list ol, .aside__list ul {
+    padding-left: 22px;
+}
+
+.aside__list li {
+    position: relative;
+}
+
+.aside__list li::before {
+    content: '\2014';
+    position: absolute;
+    display: inline-block;
+    width: 22px;
+    height: auto;
+    left: -22px;
+    top: 0;
+    line-height: 33px;
+    text-align: left;
+    background-color: transparent;
+    color: rgba(155, 155, 155, 1);
+    color: var(--color-fontSecondary-light);
+}
+
+@media (min-width: 576px) {
+    .aside__list li::before {
+        left: -22px;
+    }
 }
 
 hr {
@@ -554,10 +551,12 @@ small {
 blockquote {
     max-width: 594px;
     padding: 22px 22px 22px 33px;
-    margin: 22px 0;
+    margin: 33px 0;
     margin-left: -33px;
     margin-right: -22px;
-    font-size: 12px;
+    font-size: 13px;
+    color: rgba(51, 51, 51, 1);
+    color: var(--color-fontMain);
     background-color: rgba(255, 224, 102, .1);
     background-color: var(--color-bgYellow);
 }

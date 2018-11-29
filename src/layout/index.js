@@ -1,13 +1,5 @@
-import Aside from './aside';
-import Footer from './footer';
-import Nav from './nav';
-import Layout from './layout';
-import List from './list';
-
-export {
-  Aside,
-  Footer,
-  Nav,
-  Layout,
-  List,
-};
+export { default as Aside } from './aside';
+export { default as Footer } from './footer';
+export { default as Nav } from './nav';
+export { default as Layout } from './layout';
+export { default as List } from './list';

@@ -6,22 +6,6 @@ const highlight = require('remark-highlight.js');
 const mainPath = process.cwd();
 const ENV = process.env.NODE_ENV;
 
-const isProd = process.env.NODE_ENV === 'production';
-
-const babelConfigs = {
-  loader: 'babel-loader',
-  options: {
-    presets: ['@babel/preset-env', '@babel/preset-react'],
-    plugins: [
-      '@babel/plugin-syntax-dynamic-import',
-    ],
-  },
-};
-
-if (isProd) {
-  babelConfigs.options.plugins.push('transform-react-remove-prop-types');
-}
-
 const mdxConfigs = {
   loader: '@mdx-js/loader',
   options: {
@@ -51,12 +35,16 @@ const webpackConfig = {
       {
         test: /\.m?js$/,
         exclude: /(node_modules)/,
-        use: babelConfigs,
+        use: {
+          loader: 'babel-loader',
+        },
       },
       {
         test: /.mdx?$/,
         use: [
-          babelConfigs,
+          {
+            loader: 'babel-loader',
+          },
           mdxConfigs,
         ],
       },
