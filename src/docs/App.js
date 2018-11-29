@@ -9,7 +9,7 @@ import {
   Aside,
   Nav,
   List,
-} from 'Layout/components';
+} from 'Layout';
 
 import Package from 'Root/package.json';
 
