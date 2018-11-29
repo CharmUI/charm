@@ -1,7 +1,0 @@
-.hljs {
-  padding: 22px 22px 22px 33px;
-
-  @media (min-width: 576px) {
-    padding: 22px 22px;
-  }
-}
