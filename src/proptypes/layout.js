@@ -36,7 +36,6 @@ const LayoutProps = {
   aside: PropTypes.element,
   nav: PropTypes.element,
 
-  listProps: ListProps,
   asideProps: AsideProps,
   navProps: NavProps,
   footerProps: FooterProps,
