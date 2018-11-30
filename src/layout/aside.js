@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { List } from './index';
+import { AsideProps } from '../proptypes';
 
 function Aside({
   logo,
@@ -33,11 +34,6 @@ Aside.defaultProps = {
   listContents: null,
 };
 
-Aside.propTypes = {
-  logo: PropTypes.string,
-  nav: PropTypes.element,
-  LinkComponent: PropTypes.element,
-  listContents: PropTypes.arrayOf(PropTypes.shape()),
-};
+Aside.propTypes = AsideProps;
 
 export default Aside;

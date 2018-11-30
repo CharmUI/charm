@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { NavProps } from '../proptypes';
+
 function Nav({
   title,
   lastUpdate,
@@ -22,10 +24,6 @@ Nav.defaultProps = {
   version: null,
 };
 
-Nav.propTypes = {
-  title: PropTypes.string,
-  lastUpdate: PropTypes.string,
-  version: PropTypes.string,
-};
+Nav.propTypes = NavProps;
 
 export default Nav;

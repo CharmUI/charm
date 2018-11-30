@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react';
 
+import { ListProps } from '../proptypes';
+
 function List(props) {
   const {
     links,
@@ -55,10 +57,6 @@ List.defaultProps = {
   LinkComponent: null,
 };
 
-List.propTypes = {
-  links: PropTypes.arrayOf(PropTypes.shape()),
-  isInner: PropTypes.bool,
-  LinkComponent: PropTypes.shape(),
-};
+List.propTypes = ListProps;
 
 export default List;

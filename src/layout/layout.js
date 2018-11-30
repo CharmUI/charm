@@ -6,6 +6,8 @@ import {
   Nav,
 } from './index';
 
+import { LayoutProps } from '../proptypes';
+
 function Layout({
   // components
   children,
@@ -94,31 +96,6 @@ Layout.defaultProps = {
   },
 };
 
-Layout.propTypes = {
-  children: PropTypes.node,
-  footer: PropTypes.element,
-  aside: PropTypes.element,
-  // componentProps
-  listProps: {
-    LinkComponent: PropTypes.element,
-    listContents: PropTypes.arrayOf(PropTypes.shape()),
-  },
-  asideProps: {
-    logo: PropTypes.oneOfType([
-      PropTypes.element,
-      PropTypes.string,
-    ]),
-    nav: PropTypes.element,
-  },
-  navProps: {
-    currentRoute: PropTypes.shape(),
-    version: PropTypes.string,
-  },
-  footerProps: {
-    nextRoute: PropTypes.shape(),
-    prevRoute: PropTypes.shape(),
-    onFooterLinkClick: PropTypes.func,
-  },
-};
+Layout.propTypes = LayoutProps;
 
 export default Layout;

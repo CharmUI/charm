@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { FooterProps } from '../proptypes';
+
 function Footer({
   prevRoute,
   nextRoute,
@@ -52,10 +54,6 @@ Footer.defaultProps = {
   onClickHandler: () => {},
 };
 
-Footer.propTypes = {
-  prevRoute: PropTypes.shape(),
-  nextRoute: PropTypes.shape(),
-  onClickHandler: PropTypes.func,
-};
+Footer.propTypes = FooterProps;
 
 export default Footer;
