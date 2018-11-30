@@ -5,14 +5,13 @@ import { AsideProps } from '../proptypes';
 
 function Aside({
   logo,
-  nav,
-  listContents,
-  LinkComponent,
+  list,
+  listProps,
 }) {
   const ListComponent = (
     <List
-      links={listContents}
-      LinkComponent={LinkComponent}
+      listContents={listProps.listContents}
+      LinkComponent={listProps.LinkComponent}
     />
   );
 
@@ -22,16 +21,15 @@ function Aside({
         <small className="small text--bold">{ logo }</small>
       </div>
 
-      { nav || ListComponent }
+      { list || ListComponent }
     </div>
   );
 }
 
 Aside.defaultProps = {
   logo: null,
-  nav: null,
-  LinkComponent: null,
-  listContents: null,
+  list: null,
+  listProps: null,
 };
 
 Aside.propTypes = AsideProps;

@@ -4,7 +4,7 @@ import { ListProps } from '../proptypes';
 
 function List(props) {
   const {
-    links,
+    listContents,
     isInner,
     LinkComponent,
   } = props;
@@ -17,7 +17,7 @@ function List(props) {
           : 'aside__list'
       }
     >
-      { links.map((linkProps) => {
+      { listContents.map((linkProps) => {
         const {
           bullet,
           content,
@@ -37,7 +37,7 @@ function List(props) {
                 <li className="list-item--style-none">
                   <List
                     {...props}
-                    links={content}
+                    listContents={content}
                     isInner
                   />
                 </li>
@@ -52,7 +52,7 @@ function List(props) {
 }
 
 List.defaultProps = {
-  links: [],
+  listContents: [],
   isInner: false,
   LinkComponent: null,
 };

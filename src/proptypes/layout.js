@@ -8,20 +8,19 @@ export const FooterProps = {
   onClickHandler: PropTypes.func,
 };
 
+export const ListProps = {
+  listContents: ContentProps,
+  isInner: PropTypes.bool,
+  LinkComponent: PropTypes.element,
+};
+
 export const AsideProps = {
   logo: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.string,
   ]),
-  nav: PropTypes.element,
-  LinkComponent: PropTypes.element,
-  listContents: ContentProps,
-};
-
-export const ListProps = {
-  links: ContentProps,
-  isInner: PropTypes.bool,
-  LinkComponent: PropTypes.element,
+  list: PropTypes.element,
+  listProps: ListProps,
 };
 
 export const NavProps = {

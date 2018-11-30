@@ -14,39 +14,32 @@ function Layout({
   footer,
   aside,
   nav,
-  link,
-  // info
-  logo,
-  listContents,
-  currentRoute,
-  nextRoute,
-  prevRoute,
-  version,
-  // functions
-  onFooterLinkClick,
+  // componentProps
+  asideProps,
+  navProps,
+  footerProps,
 }) {
   const LayoutAside = (
     <Aside
-      logo={logo}
-      nav={nav}
-      listContents={listContents}
-      LinkComponent={link}
+      logo={asideProps.logo}
+      list={asideProps.list}
+      listProps={asideProps.listProps}
     />
   );
 
   const LayoutNav = (
     <Nav
-      title={currentRoute.name}
-      lastUpdate={currentRoute.lastUpdate}
-      version={version}
+      title={navProps.currentRoute.name}
+      lastUpdate={navProps.currentRoute.lastUpdate}
+      version={navProps.version}
     />
   );
 
   const LayoutFooter = (
     <Footer
-      prevRoute={prevRoute}
-      nextRoute={nextRoute}
-      onClickHandler={onFooterLinkClick}
+      prevRoute={footerProps.prevRoute}
+      nextRoute={footerProps.nextRoute}
+      onClickHandler={footerProps.onFooterLinkClick}
     />
   );
 
