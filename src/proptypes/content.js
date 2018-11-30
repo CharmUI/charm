@@ -8,11 +8,13 @@ export const RouteProps = PropTypes.shape({
   lastUpdate: PropTypes.string,
 });
 
-export const ContentProps = PropTypes.arrayOf({
-  bullet: PropTypes.string,
-  path: PropTypes.string,
-  exact: PropTypes.bool,
-  name: PropTypes.string,
-  lastUpdate: PropTypes.string,
-  content: PropTypes.arrayOf(RouteProps),
-});
+export const ContentProps = PropTypes.arrayOf(
+  PropTypes.shape({
+    bullet: PropTypes.string,
+    path: PropTypes.string,
+    exact: PropTypes.bool,
+    name: PropTypes.string,
+    lastUpdate: PropTypes.string,
+    content: PropTypes.arrayOf(RouteProps),
+  }),
+);

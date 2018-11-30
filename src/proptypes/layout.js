@@ -11,15 +11,15 @@ const FooterProps = PropTypes.shape({
 const ListProps = PropTypes.shape({
   listContents: ContentProps,
   isInner: PropTypes.bool,
-  LinkComponent: PropTypes.element,
+  LinkComponent: PropTypes.oneOfType([null, PropTypes.node]),
 });
 
 const AsideProps = PropTypes.shape({
   logo: PropTypes.oneOfType([
-    PropTypes.element,
+    PropTypes.oneOfType([null, PropTypes.node]),
     PropTypes.string,
   ]),
-  list: PropTypes.element,
+  list: PropTypes.oneOfType([null, PropTypes.node]),
   listProps: ListProps,
 });
 
@@ -32,9 +32,9 @@ const NavProps = PropTypes.shape({
 const LayoutProps = {
   children: PropTypes.node,
 
-  footer: PropTypes.element,
-  aside: PropTypes.element,
-  nav: PropTypes.element,
+  footer: PropTypes.oneOfType([null, PropTypes.node]),
+  aside: PropTypes.oneOfType([null, PropTypes.node]),
+  nav: PropTypes.oneOfType([null, PropTypes.node]),
 
   asideProps: AsideProps,
   navProps: NavProps,

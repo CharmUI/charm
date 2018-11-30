@@ -9,11 +9,13 @@ import {
 import { LayoutProps } from '../proptypes';
 
 function Layout({
-  // components
   children,
+
+  // components
   footer,
   aside,
   nav,
+
   // componentProps
   asideProps,
   navProps,
@@ -66,17 +68,19 @@ function Layout({
 
 Layout.defaultProps = {
   children: null,
+
   footer: null,
   aside: null,
   nav: null,
+
   // componentProps
-  listProps: {
-    LinkComponent: null,
-    listContents: [],
-  },
   asideProps: {
     logo: 'Charm UI',
-    nav: null,
+    list: null,
+    listProps: {
+      LinkComponent: null,
+      listContents: [],
+    },
   },
   navProps: {
     currentRoute: null,
