@@ -11,21 +11,21 @@
   }
 }
 
+.layout {
+  width: 100%;
+
+  padding: 165px 0 22px;
+
+  @media (min-width: 992px) {
+    padding: 176px 0 22px 418px;
+  }
+}
+
 .footer {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
   justify-content: space-between;
-}
-
-.layout {
-  width: 100%;
-
-  padding: 154px 0 22px;
-
-  @media (min-width: 992px) {
-    padding: 165px 0 22px 418px;
-  }
 }
 
 .nav {
@@ -63,7 +63,7 @@
 
   &__logo {
     display: inline-block;
-    max-height: 22px;
+    max-height: 33px;
 
     margin-bottom: 132px;
 
