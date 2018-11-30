@@ -69,6 +69,10 @@ function Layout({
 Layout.defaultProps = {
   children: null,
 
+  footer: null,
+  aside: null,
+  nav: null,
+
   // componentProps
   asideProps: {
     logo: 'Charm UI',

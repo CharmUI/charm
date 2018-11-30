@@ -6,40 +6,40 @@ const FooterProps = PropTypes.shape({
   prevRoute: RouteProps,
   nextRoute: RouteProps,
   onClickHandler: PropTypes.func,
-});
+}).isRequired;
 
 const ListProps = PropTypes.shape({
   listContents: ContentProps,
   isInner: PropTypes.bool,
-  LinkComponent: PropTypes.node,
-});
+  LinkComponent: PropTypes.element,
+}).isRequired;
 
 const AsideProps = PropTypes.shape({
   logo: PropTypes.oneOfType([
-    PropTypes.node,
+    PropTypes.element,
     PropTypes.string,
   ]),
-  list: PropTypes.node,
+  list: PropTypes.element,
   listProps: ListProps,
-});
+}).isRequired;
 
 const NavProps = PropTypes.shape({
   title: PropTypes.string,
   lastUpdate: PropTypes.string,
   version: PropTypes.string,
-});
+}).isRequired;
 
-const LayoutProps = {
+const LayoutProps = PropTypes.shape({
   children: PropTypes.node,
 
-  footer: PropTypes.node,
-  aside: PropTypes.node,
-  nav: PropTypes.node,
+  footer: PropTypes.element,
+  aside: PropTypes.element,
+  nav: PropTypes.element,
 
   asideProps: AsideProps,
   navProps: NavProps,
   footerProps: FooterProps,
-};
+});
 
 export {
   LayoutProps,
