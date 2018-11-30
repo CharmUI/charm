@@ -65,6 +65,8 @@
   /* size */
   &--small {
     font-size: 11px !important;
+    line-height: 33px !important;
+    vertical-align: middle !important;
   }
 }
 

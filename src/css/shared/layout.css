@@ -114,5 +114,6 @@
 
   &.is-shown {
     display: block !important;
+    border-right: 1px solid rgba(221, 221, 221, 1);
   }
 }
