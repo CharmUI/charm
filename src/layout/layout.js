@@ -21,33 +21,6 @@ function Layout({
   navProps,
   footerProps,
 }) {
-  const LayoutAside = (
-    <Aside
-      logo={asideProps.logo}
-      list={asideProps.list}
-      listProps={asideProps.listProps}
-      isShown={asideProps.isShown}
-    />
-  );
-
-  const LayoutNav = (
-    <Nav
-      title={navProps.currentRoute.name}
-      lastUpdate={navProps.currentRoute.lastUpdate}
-      version={navProps.version}
-      onButtonClick={navProps.onButtonClick}
-      buttonName={navProps.buttonName}
-    />
-  );
-
-  const LayoutFooter = (
-    <Footer
-      prevRoute={footerProps.prevRoute}
-      nextRoute={footerProps.nextRoute}
-      onClickHandler={footerProps.onFooterLinkClick}
-    />
-  );
-
   return (
     <>
       <div className="layout">
@@ -58,13 +31,13 @@ function Layout({
         <div className="content">
           <hr />
 
-          { footer || LayoutFooter }
+          { footer || <Footer {...footerProps} /> }
         </div>
       </div>
 
-      { nav || LayoutNav }
+      { nav || <Nav {...navProps} /> }
 
-      { aside || LayoutAside }
+      { aside || <Aside {...asideProps} /> }
     </>
   );
 }
@@ -88,9 +61,11 @@ Layout.defaultProps = {
     },
   },
   navProps: {
-    currentRoute: null,
     version: null,
     buttonName: 'Menu',
+    onButtonClick: () => {},
+    title: null,
+    lastUpdate: null,
   },
   footerProps: {
     nextRoute: null,

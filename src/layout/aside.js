@@ -11,9 +11,7 @@ function Aside({
 }) {
   const ListComponent = (
     <List
-      listContents={listProps.listContents}
-      LinkComponent={listProps.LinkComponent}
-      onLinkClick={listProps.onLinkClick}
+      {...listProps}
     />
   );
 
