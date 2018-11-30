@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const RouteShape = {
   bullet: PropTypes.string,
   path: PropTypes.string,

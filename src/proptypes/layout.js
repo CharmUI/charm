@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { ContentProps, RouteProps } from './content';
 
 export const FooterProps = {
