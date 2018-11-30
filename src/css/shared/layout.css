@@ -63,8 +63,9 @@
 
   &__logo {
     display: inline-block;
+    max-height: 22px;
 
-    margin-bottom: 88px;
+    margin-bottom: 132px;
 
     & img {
       margin-left: 0 !important;
