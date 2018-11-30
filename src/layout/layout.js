@@ -1,12 +1,12 @@
 import React from 'react';
 
+import { LayoutProps } from '../proptypes';
+
 import {
   Aside,
   Footer,
   Nav,
 } from './index';
-
-import { LayoutProps } from '../proptypes';
 
 function Layout({
   children,
@@ -17,9 +17,9 @@ function Layout({
   nav,
 
   // componentProps
-  asideProps,
-  navProps,
   footerProps,
+  navProps,
+  asideProps,
 }) {
   return (
     <>
@@ -50,28 +50,9 @@ Layout.defaultProps = {
   nav: null,
 
   // componentProps
-  asideProps: {
-    logo: 'Charm UI',
-    list: null,
-    isShown: false,
-    listProps: {
-      onLinkClick: () => {},
-      LinkComponent: null,
-      listContents: [],
-    },
-  },
-  navProps: {
-    version: null,
-    buttonName: 'Menu',
-    onButtonClick: () => {},
-    title: null,
-    lastUpdate: null,
-  },
-  footerProps: {
-    nextRoute: null,
-    prevRoute: null,
-    onFooterLinkClick: null,
-  },
+  footerProps: null,
+  navProps: null,
+  asideProps: null,
 };
 
 Layout.propTypes = LayoutProps;

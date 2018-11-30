@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { List } from './index';
 import { AsideProps } from '../proptypes';
+
+import { List } from './index';
 
 function Aside({
   logo,
