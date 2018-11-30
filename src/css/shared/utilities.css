@@ -93,4 +93,25 @@
   &--inline-block {
     display: inline-block !important;
   }
+
+  &--none {
+    display: none !important;
+  }
+
+  &--block {
+    display: block !important;
+  }
+
+  &-sm {
+    @media (min-width: 992px) {
+      &--none {
+        display: none !important;
+      }
+
+      &--block {
+        display: block !important;
+      }
+    }
+  }
+
 }

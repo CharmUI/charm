@@ -7,6 +7,7 @@ function Aside({
   logo,
   list,
   listProps,
+  isShown,
 }) {
   const ListComponent = (
     <List
@@ -16,7 +17,7 @@ function Aside({
   );
 
   return (
-    <div className="aside">
+    <div className={isShown ? 'aside is-shown' : 'aside'}>
       <div className="aside__logo">
         <small className="small text--bold">{ logo }</small>
       </div>
@@ -30,6 +31,7 @@ Aside.defaultProps = {
   logo: null,
   list: null,
   listProps: null,
+  isShown: false,
 };
 
 Aside.propTypes = AsideProps;

@@ -26,6 +26,7 @@ function Layout({
       logo={asideProps.logo}
       list={asideProps.list}
       listProps={asideProps.listProps}
+      isShown={asideProps.isShown}
     />
   );
 
@@ -34,6 +35,8 @@ function Layout({
       title={navProps.currentRoute.name}
       lastUpdate={navProps.currentRoute.lastUpdate}
       version={navProps.version}
+      onButtonClick={navProps.onButtonClick}
+      buttonName={navProps.buttonName}
     />
   );
 
@@ -77,6 +80,7 @@ Layout.defaultProps = {
   asideProps: {
     logo: 'Charm UI',
     list: null,
+    isShown: false,
     listProps: {
       LinkComponent: null,
       listContents: [],

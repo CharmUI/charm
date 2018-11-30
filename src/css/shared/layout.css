@@ -70,11 +70,6 @@
     }
   }
 
-  @media (min-width: 992px) {
-    display: block;
-    padding: 44px 0 44px 88px;
-  }
-
   &__list {
 
     & ol,
@@ -105,5 +100,14 @@
         }
       }
     }
+  }
+
+  @media (min-width: 992px) {
+    display: block;
+    padding: 44px 0 44px 88px;
+  }
+
+  &.is-shown {
+    display: block !important;
   }
 }

@@ -21,12 +21,16 @@ const AsideProps = PropTypes.shape({
   ]),
   list: PropTypes.element,
   listProps: ListProps,
+  isShown: PropTypes.bool,
 }).isRequired;
 
 const NavProps = PropTypes.shape({
   title: PropTypes.string,
   lastUpdate: PropTypes.string,
   version: PropTypes.string,
+  withButton: PropTypes.bool,
+  onButtonClick: PropTypes.func,
+  buttonName: PropTypes.string,
 }).isRequired;
 
 const LayoutProps = PropTypes.shape({
@@ -39,7 +43,7 @@ const LayoutProps = PropTypes.shape({
   asideProps: AsideProps,
   navProps: NavProps,
   footerProps: FooterProps,
-});
+}).isRequired;
 
 export {
   LayoutProps,

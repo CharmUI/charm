@@ -6,10 +6,24 @@ function Nav({
   title,
   lastUpdate,
   version,
+  withButton,
+  buttonName,
+  onButtonClick,
 }) {
   return (
     <nav className="nav">
       <ul className="list list--inline list--style-none">
+        { withButton && (
+          <li className="d-sm-none d-block text--secondary">
+            <button
+              type="button"
+              className="button small text--blue"
+              onClick={onButtonClick}
+            >
+              { buttonName }
+            </button>
+          </li>
+        )}
         { version && <li className="text--secondary"><small className="small">{ `v${version}` }</small></li> }
         { title && <li className="text--secondary"><small className="small">{ title }</small></li> }
         { lastUpdate && <li className="text--light"><small className="small">{ lastUpdate }</small></li> }
@@ -22,6 +36,9 @@ Nav.defaultProps = {
   title: null,
   lastUpdate: null,
   version: null,
+  withButton: true,
+  buttonName: 'Menu',
+  onButtonClick: () => {},
 };
 
 Nav.propTypes = NavProps;
