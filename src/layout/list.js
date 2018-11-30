@@ -7,6 +7,7 @@ function List(props) {
     listContents,
     isInner,
     LinkComponent,
+    onLinkClick,
   } = props;
 
   return (
@@ -29,6 +30,7 @@ function List(props) {
             <li className={isInner ? '' : 'list-item--style-none'}>
               <LinkComponent
                 {...linkProps}
+                onClick={onLinkClick}
                 className={isInner ? 'link_small' : ''}
               />
             </li>
@@ -55,6 +57,7 @@ List.defaultProps = {
   listContents: [],
   isInner: false,
   LinkComponent: null,
+  onLinkClick: () => {},
 };
 
 List.propTypes = ListProps;

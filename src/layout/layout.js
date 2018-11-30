@@ -82,6 +82,7 @@ Layout.defaultProps = {
     list: null,
     isShown: false,
     listProps: {
+      onLinkClick: () => {},
       LinkComponent: null,
       listContents: [],
     },
@@ -89,6 +90,7 @@ Layout.defaultProps = {
   navProps: {
     currentRoute: null,
     version: null,
+    buttonName: 'Menu',
   },
   footerProps: {
     nextRoute: null,

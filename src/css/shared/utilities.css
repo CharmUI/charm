@@ -109,6 +109,15 @@
 
   &-sm {
     @media (min-width: 992px) {
+      &--flex {
+        display: -ms-flexbox !important;
+        display: flex !important;
+      }
+    
+      &--inline-block {
+        display: inline-block !important;
+      }
+  
       &--none {
         display: none !important;
       }

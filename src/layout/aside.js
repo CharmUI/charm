@@ -13,6 +13,7 @@ function Aside({
     <List
       listContents={listProps.listContents}
       LinkComponent={listProps.LinkComponent}
+      onLinkClick={listProps.onLinkClick}
     />
   );
 

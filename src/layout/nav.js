@@ -14,7 +14,7 @@ function Nav({
     <nav className="nav">
       <ul className="list list--inline list--style-none">
         { withButton && (
-          <li className="display-sm--none display--block text--secondary">
+          <li className="display-sm--none display--inline-block text--secondary">
             <button
               type="button"
               className="button text--small text--blue"

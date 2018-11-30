@@ -11,6 +11,7 @@ const FooterProps = PropTypes.shape({
 const ListProps = PropTypes.shape({
   listContents: ContentProps,
   isInner: PropTypes.bool,
+  onLinkClick: PropTypes.func,
   LinkComponent: PropTypes.element,
 }).isRequired;
 
