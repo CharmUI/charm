@@ -3,7 +3,6 @@ import React from 'react';
 import {
   Aside,
   Footer,
-  List,
   Nav,
 } from './index';
 
@@ -27,12 +26,9 @@ function Layout({
   const LayoutAside = (
     <Aside
       logo={logo}
-      nav={(
-        <List
-          links={listContents}
-          LinkComponent={link}
-        />
-      )}
+      nav={nav}
+      listContents={listContents}
+      LinkComponent={link}
     />
   );
 
@@ -78,36 +74,51 @@ Layout.defaultProps = {
   footer: null,
   aside: null,
   nav: null,
-  link: null,
-  // info
-  logo: 'Charm UI',
-  listContents: [],
-  currentRoute: null,
-  nextRoute: null,
-  prevRoute: null,
-  version: null,
-  // functions
-  onFooterLinkClick: null,
+  // componentProps
+  listProps: {
+    LinkComponent: null,
+    listContents: [],
+  },
+  asideProps: {
+    logo: 'Charm UI',
+    nav: null,
+  },
+  navProps: {
+    currentRoute: null,
+    version: null,
+  },
+  footerProps: {
+    nextRoute: null,
+    prevRoute: null,
+    onFooterLinkClick: null,
+  },
 };
 
 Layout.propTypes = {
   children: PropTypes.node,
   footer: PropTypes.element,
   aside: PropTypes.element,
-  nav: PropTypes.element,
-  link: PropTypes.element,
-  // info
-  logo: PropTypes.oneOfType([
-    PropTypes.element,
-    PropTypes.string,
-  ]),
-  listContents: PropTypes.arrayOf(PropTypes.shape()),
-  currentRoute: PropTypes.shape(),
-  nextRoute: PropTypes.shape(),
-  prevRoute: PropTypes.shape(),
-  version: PropTypes.string,
-  // functions
-  onFooterLinkClick: PropTypes.func,
+  // componentProps
+  listProps: {
+    LinkComponent: PropTypes.element,
+    listContents: PropTypes.arrayOf(PropTypes.shape()),
+  },
+  asideProps: {
+    logo: PropTypes.oneOfType([
+      PropTypes.element,
+      PropTypes.string,
+    ]),
+    nav: PropTypes.element,
+  },
+  navProps: {
+    currentRoute: PropTypes.shape(),
+    version: PropTypes.string,
+  },
+  footerProps: {
+    nextRoute: PropTypes.shape(),
+    prevRoute: PropTypes.shape(),
+    onFooterLinkClick: PropTypes.func,
+  },
 };
 
 export default Layout;
