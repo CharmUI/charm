@@ -17,7 +17,7 @@ function Nav({
           <li className="d-sm-none d-block text--secondary">
             <button
               type="button"
-              className="button small text--blue"
+              className="button text--small text--blue"
               onClick={onButtonClick}
             >
               { buttonName }

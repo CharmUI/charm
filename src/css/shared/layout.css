@@ -59,11 +59,16 @@
   left: 0;
 
   padding: 33px 0 44px 33px;
+  background-color: var(--color-bgMain-95);
 
   &__logo {
     display: inline-block;
 
     margin-bottom: 88px;
+
+    & img {
+      margin-left: 0 !important;
+    }
 
     @media (min-width: 992px) {
       margin-bottom: 231px;
