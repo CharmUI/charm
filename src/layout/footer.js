@@ -5,7 +5,7 @@ import { FooterProps } from '../proptypes';
 function Footer({
   prevRoute,
   nextRoute,
-  onClickHandler,
+  onFooterLinkClick,
 }) {
   return (
     <footer className="footer">
@@ -14,7 +14,7 @@ function Footer({
           <button
             className="button"
             type="button"
-            onClick={() => onClickHandler(prevRoute.path)}
+            onClick={() => onFooterLinkClick(prevRoute.path)}
           >
             Previous
             <br />
@@ -32,7 +32,7 @@ function Footer({
           <button
             className="button text--right"
             type="button"
-            onClick={() => onClickHandler(nextRoute.path)}
+            onClick={() => onFooterLinkClick(nextRoute.path)}
           >
             Next
             <br />
@@ -51,7 +51,7 @@ function Footer({
 Footer.defaultProps = {
   prevRoute: null,
   nextRoute: null,
-  onClickHandler: () => {},
+  onFooterLinkClick: () => {},
 };
 
 Footer.propTypes = FooterProps;

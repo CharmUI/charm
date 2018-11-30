@@ -5,7 +5,7 @@ import { ContentProps, RouteProps } from './content';
 const FooterProps = PropTypes.shape({
   prevRoute: RouteProps,
   nextRoute: RouteProps,
-  onClickHandler: PropTypes.func,
+  onFooterLinkClick: PropTypes.func,
 }).isRequired;
 
 const ListProps = PropTypes.shape({
