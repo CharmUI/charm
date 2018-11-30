@@ -10,13 +10,7 @@
     "esm": {
       "presets": [["@babel/preset-env", { "modules": false }]],
       "plugins": [
-        "transform-react-remove-prop-types",
         ["@babel/plugin-transform-runtime", { "useESModules": true }]
-      ]
-    },
-    "production": {
-      "plugins": [
-        "transform-react-remove-prop-types"
       ]
     }
   }
