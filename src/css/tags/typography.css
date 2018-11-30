@@ -25,6 +25,7 @@ blockquote {
   margin-right: -22px;
 
   font-size: 12px;
+  color: var(--color-fontblack);
 
   background-color: var(--color-bgYellow);
 
