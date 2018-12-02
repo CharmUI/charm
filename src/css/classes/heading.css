@@ -4,7 +4,7 @@
   font-weight: 700;
   letter-spacing: -0.014em;
 
-  color: var(--color-fontMain);
+  color: var(--color-fontBlack);
   margin-bottom: 55px;
 }
 
@@ -14,7 +14,7 @@
   font-weight: 600;
   letter-spacing: -0.008em;
 
-  color: var(--color-fontMain);
+  color: var(--color-fontBlack);
   margin-bottom: 22px;
   margin-top: 40px;
 }
@@ -25,7 +25,7 @@
   font-weight: 600;
   letter-spacing: -0.002em;
 
-  color: var(--color-fontMain);
+  color: var(--color-fontBlack);
   margin-bottom: 22px;
   margin-top: 33px;
 }
