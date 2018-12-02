@@ -11,17 +11,20 @@ function Nav({
   return (
     <nav className="nav">
       <ul className="list list--inline list--style-none">
-        { withButton && (
-          <li className="display-sm--none display--inline-block text--secondary">
-            <button
-              type="button"
-              className="button text--small text--blue"
-              onClick={onButtonClick}
-            >
-              { buttonName }
-            </button>
-          </li>
-        )}
+        { withButton
+          ? (
+            <li className="display-sm--none display--inline-block text--secondary">
+              <button
+                type="button"
+                className="button text--small text--blue"
+                onClick={onButtonClick}
+              >
+                { buttonName }
+              </button>
+            </li>
+          )
+          : null
+        }
         { content && content.map((text, index) => (
           <li key={index} className="text--secondary"><small className="small">{ text }</small></li>
         ))}
