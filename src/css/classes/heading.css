@@ -14,7 +14,7 @@
   font-weight: 600;
   letter-spacing: -0.008em;
 
-  color: var(--color-fontSecondary);
+  color: var(--color-fontMain);
   margin-bottom: 22px;
   margin-top: 40px;
 }
@@ -25,7 +25,7 @@
   font-weight: 600;
   letter-spacing: -0.002em;
 
-  color: var(--color-fontSecondary);
+  color: var(--color-fontMain);
   margin-bottom: 22px;
   margin-top: 33px;
 }
