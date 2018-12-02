@@ -16,10 +16,11 @@ const ListProps = PropTypes.shape({
 }).isRequired;
 
 const NavProps = PropTypes.shape({
-  content: PropTypes.arrayOf(PropTypes.string),
-  withButton: PropTypes.bool,
-  buttonName: PropTypes.string,
-  onButtonClick: PropTypes.func,
+  content: PropTypes.arrayOf(PropTypes.shape({
+    type: PropTypes.string,
+    name: PropTypes.string,
+    onClick: PropTypes.func,
+  })),
 }).isRequired;
 
 const AsideProps = PropTypes.shape({
