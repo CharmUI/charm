@@ -3,9 +3,7 @@ import React from 'react';
 import { NavProps } from '../proptypes';
 
 function Nav({
-  title,
-  lastUpdate,
-  version,
+  content,
   withButton,
   buttonName,
   onButtonClick,
@@ -24,18 +22,16 @@ function Nav({
             </button>
           </li>
         )}
-        { version && <li className="text--secondary"><small className="small">{ `v${version}` }</small></li> }
-        { title && <li className="text--secondary"><small className="small">{ title }</small></li> }
-        { lastUpdate && <li className="text--light"><small className="small">{ lastUpdate }</small></li> }
+        { content && content.map((text, index) => (
+          <li key={index} className="text--secondary"><small className="small">{ text }</small></li>
+        ))}
       </ul>
     </nav>
   );
 }
 
 Nav.defaultProps = {
-  title: null,
-  lastUpdate: null,
-  version: null,
+  content: null,
   withButton: true,
   buttonName: 'Menu',
   onButtonClick: () => {},

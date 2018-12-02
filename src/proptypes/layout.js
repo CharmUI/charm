@@ -16,9 +16,7 @@ const ListProps = PropTypes.shape({
 }).isRequired;
 
 const NavProps = PropTypes.shape({
-  title: PropTypes.string,
-  lastUpdate: PropTypes.string,
-  version: PropTypes.string,
+  content: PropTypes.arrayOf(PropTypes.string),
   withButton: PropTypes.bool,
   buttonName: PropTypes.string,
   onButtonClick: PropTypes.func,
