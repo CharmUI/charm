@@ -8,7 +8,7 @@ function loadStories() {
   req.keys().forEach(filename => req(filename));
 }
 
-addDecorator(story => <div style={{ padding: '66px 99px 66px 66px', maxWidth: '715px' }}>{story()}</div>);
+addDecorator(story => <div class="layout"><div class="content">{story()}</div></div>);
 addDecorator(
   withOptions({
     name: 'Charm UI',
