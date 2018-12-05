@@ -1,6 +1,7 @@
 .lead {
   display: inline-block;
   vertical-align: top;
+  width: 100%;
 
   font-size: 12px;
   line-height: 22px;
