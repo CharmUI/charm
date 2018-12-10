@@ -32,7 +32,13 @@ function List(props) {
             </li>
             { content && (isCurrentPath || isInner)
               ? (
-                <li className="list-item--style-none margin-bottom--1">
+                <li
+                  className={
+                    isInner
+                      ? 'list-item--style-none'
+                      : 'list-item--style-none margin-bottom--1'
+                  }
+                >
                   <List
                     {...props}
                     listContents={content}
