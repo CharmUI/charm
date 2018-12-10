@@ -1,25 +1,7 @@
 .code {
-  display: block;
-  max-width: 594px;
+  padding-left: 4px;
+  padding-right: 4px;
+  color: var(--color-fontBlack);
 
-  padding: 22px 22px 22px 33px;
-
-  margin: 22px 0;
-  margin-left: -33px;
-  margin-right: -22px;
-
-  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
-  font-size: 13px;
-  font-weight: 500;
-
-  color: #fff;
-  background-color: var(--color-bgCode);
-
-  @media (min-width: 576px) {
-    padding: 11px 22px;
-    margin-right: -22px;
-    margin-left: -22px;
-
-    border-radius: 2px;
-  }
+  background-color: var(--color-bgYellow);
 }
