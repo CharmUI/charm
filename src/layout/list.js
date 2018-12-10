@@ -12,11 +12,7 @@ function List(props) {
 
   return (
     <ul
-      className={
-        isInner
-          ? 'aside__list margin-bottom--1'
-          : 'aside__list'
-      }
+      className="aside__list"
     >
       { listContents.map((linkProps) => {
         const {
@@ -36,7 +32,7 @@ function List(props) {
             </li>
             { content && (isCurrentPath || isInner)
               ? (
-                <li className="list-item--style-none">
+                <li className="list-item--style-none margin-bottom--1">
                   <List
                     {...props}
                     listContents={content}
