@@ -30,7 +30,7 @@ function List(props) {
                 className={isInner ? 'link_small' : ''}
               />
             </li>
-            { content && isCurrentPath
+            { content && (isCurrentPath || isInner)
               ? (
                 <li
                   className={
