@@ -12,7 +12,6 @@ const AsideProps = PropTypes.shape({
     PropTypes.node,
     PropTypes.string,
   ]),
-  isShown: PropTypes.bool,
   className: PropTypes.string,
 }).isRequired;
 
@@ -22,6 +21,7 @@ const LayoutProps = PropTypes.shape({
   footer: PropTypes.node,
   aside: PropTypes.node,
   nav: PropTypes.node,
+  isAsideShown: PropTypes.bool,
   className: PropTypes.string,
 }).isRequired;
 
