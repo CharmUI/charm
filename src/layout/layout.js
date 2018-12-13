@@ -9,6 +9,7 @@ function Layout({
   footer,
   aside,
   nav,
+
   className,
   ...restProps
 }) {
