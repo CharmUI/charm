@@ -8,7 +8,7 @@ function Footer({
   onFooterLinkClick,
 }) {
   return (
-    <footer className="footer">
+    <>
       { prevRoute
         ? (
           <button
@@ -44,7 +44,7 @@ function Footer({
         )
         : <div />
       }
-    </footer>
+    </>
   );
 }
 

@@ -2,35 +2,28 @@ import React from 'react';
 
 import { AsideProps } from '../proptypes';
 
-import { List } from './index';
-
 function Aside({
+  children,
+
   logo,
-  list,
-  listProps,
   isShown,
 }) {
-  const ListComponent = (
-    <List
-      {...listProps}
-    />
-  );
+  return isShown
+    ? (
+      <>
+        <div className="aside__logo">
+          { logo }
+        </div>
 
-  return (
-    <div className={isShown ? 'aside is-shown' : 'aside'}>
-      <div className="aside__logo">
-        <small className="small text--bold">{ logo }</small>
-      </div>
-
-      { list || ListComponent }
-    </div>
-  );
+        { children }
+      </>
+    )
+    : null;
 }
 
 Aside.defaultProps = {
   logo: null,
-  list: null,
-  listProps: null,
+  children: null,
   isShown: false,
 };
 

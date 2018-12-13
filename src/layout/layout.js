@@ -2,12 +2,6 @@ import React from 'react';
 
 import { LayoutProps } from '../proptypes';
 
-import {
-  Aside,
-  Footer,
-  Nav,
-} from './index';
-
 function Layout({
   children,
 
@@ -15,11 +9,6 @@ function Layout({
   footer,
   aside,
   nav,
-
-  // componentProps
-  footerProps,
-  navProps,
-  asideProps,
 }) {
   return (
     <>
@@ -31,13 +20,13 @@ function Layout({
         <div className="content">
           <hr />
 
-          { footer || <Footer {...footerProps} /> }
+          <footer className="footer">{ footer }</footer>
         </div>
       </div>
 
-      { nav || <Nav {...navProps} /> }
+      <nav className="nav">{ nav }</nav>
 
-      { aside || <Aside {...asideProps} /> }
+      <aside className="aside">{ aside }</aside>
     </>
   );
 }
@@ -48,11 +37,6 @@ Layout.defaultProps = {
   footer: null,
   aside: null,
   nav: null,
-
-  // componentProps
-  footerProps: null,
-  navProps: null,
-  asideProps: null,
 };
 
 Layout.propTypes = LayoutProps;

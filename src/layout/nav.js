@@ -6,7 +6,7 @@ function Nav({
   content,
 }) {
   return (
-    <nav className="nav">
+    <>
       <ul className="list list--inline list--style-none">
         { content && content.map((item, index) => (
           <li key={index} className="text--secondary">
@@ -25,7 +25,7 @@ function Nav({
           </li>
         )) }
       </ul>
-    </nav>
+    </>
   );
 }
 

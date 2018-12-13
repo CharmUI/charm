@@ -8,13 +8,6 @@ const FooterProps = PropTypes.shape({
   onFooterLinkClick: PropTypes.func,
 }).isRequired;
 
-const ListProps = PropTypes.shape({
-  listContents: ContentProps,
-  isInner: PropTypes.bool,
-  LinkComponent: PropTypes.node,
-  onLinkClick: PropTypes.func,
-}).isRequired;
-
 const NavProps = PropTypes.shape({
   content: PropTypes.arrayOf(PropTypes.shape({
     type: PropTypes.string,
@@ -24,12 +17,12 @@ const NavProps = PropTypes.shape({
 }).isRequired;
 
 const AsideProps = PropTypes.shape({
+  children: PropTypes.node,
+
   logo: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.string,
   ]),
-  list: PropTypes.node,
-  listProps: ListProps,
   isShown: PropTypes.bool,
 }).isRequired;
 
@@ -39,10 +32,6 @@ const LayoutProps = PropTypes.shape({
   footer: PropTypes.node,
   aside: PropTypes.node,
   nav: PropTypes.node,
-
-  asideProps: AsideProps,
-  navProps: NavProps,
-  footerProps: FooterProps,
 }).isRequired;
 
 export {
@@ -50,5 +39,4 @@ export {
   FooterProps,
   NavProps,
   AsideProps,
-  ListProps,
 };
