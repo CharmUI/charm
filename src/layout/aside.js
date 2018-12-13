@@ -8,11 +8,12 @@ function Aside({
   logo,
   isShown,
   className,
+  ...restProps
 }) {
   return isShown
     ? (
       <>
-        <div className={`aside__logo ${className}`}>
+        <div className={`aside__logo ${className + 1}`} {...restProps}>
           { logo }
         </div>
 
@@ -26,7 +27,7 @@ Aside.defaultProps = {
   logo: null,
   children: null,
   isShown: false,
-  className: '',
+  className: 1,
 };
 
 Aside.propTypes = AsideProps;

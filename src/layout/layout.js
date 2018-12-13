@@ -10,10 +10,11 @@ function Layout({
   aside,
   nav,
   className,
+  ...restProps
 }) {
   return (
     <>
-      <div className={`layout ${className}`}>
+      <div className={`layout ${className}`} {...restProps}>
         <main className="content">
           { children }
         </main>

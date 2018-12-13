@@ -5,9 +5,10 @@ import { NavProps } from '../proptypes';
 function Nav({
   content,
   className,
+  ...restProps
 }) {
   return (
-    <ul className={`list list--inline list--style-none ${className}`}>
+    <ul className={`list list--inline list--style-none ${className}`} {...restProps}>
       { content && content.map((item, index) => (
         <li key={index} className="text--secondary">
           { item }
