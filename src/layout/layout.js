@@ -10,6 +10,8 @@ function Layout({
   aside,
   nav,
 
+  isAsideShown,
+
   className,
   ...restProps
 }) {
@@ -29,7 +31,7 @@ function Layout({
 
       <nav className="nav">{ nav }</nav>
 
-      <aside className="aside">{ aside }</aside>
+      <aside className={`aside ${isAsideShown ? 'is-shown' : ''}`}>{ aside }</aside>
     </>
   );
 }
@@ -40,6 +42,8 @@ Layout.defaultProps = {
   footer: null,
   aside: null,
   nav: null,
+
+  isAsideShown: false,
   className: '',
 };
 

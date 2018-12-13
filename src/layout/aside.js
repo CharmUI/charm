@@ -6,13 +6,12 @@ function Aside({
   children,
 
   logo,
-  isShown,
   className,
   ...restProps
 }) {
   return (
     <>
-      <div className={`aside__logo ${className} ${isShown ? 'is-shown' : ''}`} {...restProps}>
+      <div className={`aside__logo ${className}`} {...restProps}>
         { logo }
       </div>
 
@@ -24,7 +23,6 @@ function Aside({
 Aside.defaultProps = {
   logo: null,
   children: null,
-  isShown: true,
   className: '',
 };
 
