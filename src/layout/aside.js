@@ -10,23 +10,21 @@ function Aside({
   className,
   ...restProps
 }) {
-  return isShown
-    ? (
-      <>
-        <div className={`aside__logo ${className}`} {...restProps}>
-          { logo }
-        </div>
+  return (
+    <>
+      <div className={`aside__logo ${className} ${isShown ? 'is-shown' : ''}`} {...restProps}>
+        { logo }
+      </div>
 
-        { children }
-      </>
-    )
-    : null;
+      { children }
+    </>
+  );
 }
 
 Aside.defaultProps = {
   logo: null,
   children: null,
-  isShown: false,
+  isShown: true,
   className: '',
 };
 

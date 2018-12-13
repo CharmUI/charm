@@ -70,9 +70,12 @@
   }
 
   @media (min-width: 992px) {
-    display: block;
     width: 418px;
     padding: 44px 0 44px 88px;
+  }
+
+  &.is-shown {
+    display: block;
   }
 }
 
