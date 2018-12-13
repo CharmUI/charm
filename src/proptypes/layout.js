@@ -1,13 +1,5 @@
 import PropTypes from 'prop-types';
 
-import { ContentProps, RouteProps } from './content';
-
-const FooterProps = PropTypes.shape({
-  prevRoute: RouteProps,
-  nextRoute: RouteProps,
-  onFooterLinkClick: PropTypes.func,
-}).isRequired;
-
 const NavProps = PropTypes.shape({
   content: PropTypes.arrayOf(PropTypes.node),
 }).isRequired;

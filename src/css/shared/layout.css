@@ -21,13 +21,6 @@
   }
 }
 
-.footer {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
 .nav {
   position: absolute;
   height: 33px;
@@ -82,3 +75,5 @@
     padding: 44px 0 44px 88px;
   }
 }
+
+.footer {}
