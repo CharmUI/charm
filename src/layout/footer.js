@@ -3,9 +3,10 @@ import React from 'react';
 import { FooterProps } from '../proptypes';
 
 function Footer({
-  prevRoute,
-  nextRoute,
-  onFooterLinkClick,
+  prevRouteName,
+  nextRouteName,
+  onFooterPrevLinkClick,
+  onFooterNextLinkClick,
 }) {
   return (
     <>
@@ -14,13 +15,13 @@ function Footer({
           <button
             className="button"
             type="button"
-            onClick={() => onFooterLinkClick(prevRoute.path)}
+            onClick={onFooterPrevLinkClick}
           >
             Previous
             <br />
             <span className="text--blue">
               —&nbsp;
-              { prevRoute.name }
+              { prevRouteName }
             </span>
           </button>
         )
@@ -32,12 +33,12 @@ function Footer({
           <button
             className="button text--right"
             type="button"
-            onClick={() => onFooterLinkClick(nextRoute.path)}
+            onClick={onFooterNextLinkClick}
           >
             Next
             <br />
             <span className="text--blue">
-              { nextRoute.name }
+              { nextRouteName }
               &nbsp;—
             </span>
           </button>

@@ -9,11 +9,7 @@ const FooterProps = PropTypes.shape({
 }).isRequired;
 
 const NavProps = PropTypes.shape({
-  content: PropTypes.arrayOf(PropTypes.shape({
-    type: PropTypes.string,
-    name: PropTypes.string,
-    onClick: PropTypes.func,
-  })),
+  content: PropTypes.arrayOf(PropTypes.node),
 }).isRequired;
 
 const AsideProps = PropTypes.shape({
