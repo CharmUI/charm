@@ -4,7 +4,6 @@ import { AsideProps } from '../proptypes';
 
 function Aside({
   children,
-
   logo,
   className,
   ...restProps

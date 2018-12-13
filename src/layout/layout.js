@@ -18,6 +18,10 @@ function Layout({
   return (
     <>
       <div className={`layout ${className}`} {...restProps}>
+        <div className="content">
+          <nav className="nav">{ nav }</nav>
+        </div>
+
         <main className="content">
           { children }
         </main>
@@ -28,8 +32,6 @@ function Layout({
           <footer className="footer">{ footer }</footer>
         </div>
       </div>
-
-      <nav className="nav">{ nav }</nav>
 
       <aside className={`aside ${isAsideShown ? 'is-shown' : ''}`}>{ aside }</aside>
     </>

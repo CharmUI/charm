@@ -1,10 +1,10 @@
 .layout {
   width: 100%;
 
-  padding: 165px 0 0;
+  padding: 33px 0 0;
 
   @media (min-width: 992px) {
-    padding: 176px 0 0 418px;
+    padding: 44px 0 0 418px;
   }
 }
 
@@ -17,28 +17,12 @@
 
   @media (min-width: 576px) {
     padding: 0 99px 0 66px;
-    margin-bottom: 88px;
   }
 }
 
 .nav {
-  position: absolute;
   height: 33px;
-
-  top: 33px;
-  left: auto;
-
-  padding: 0 22px 0 33px;
-
-  @media (min-width: 576px) {
-    top: 44px;
-
-    padding: 0 99px 0 66px;
-  }
-
-  @media (min-width: 992px) {
-    left: 418px;
-  }
+  margin-bottom: 88px;
 }
 
 .aside {
