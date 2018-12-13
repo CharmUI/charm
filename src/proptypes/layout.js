@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 
 const NavProps = PropTypes.shape({
   content: PropTypes.arrayOf(PropTypes.node),
+  className: PropTypes.string,
 }).isRequired;
 
 const AsideProps = PropTypes.shape({
@@ -12,6 +13,7 @@ const AsideProps = PropTypes.shape({
     PropTypes.string,
   ]),
   isShown: PropTypes.bool,
+  className: PropTypes.string,
 }).isRequired;
 
 const LayoutProps = PropTypes.shape({
@@ -20,6 +22,7 @@ const LayoutProps = PropTypes.shape({
   footer: PropTypes.node,
   aside: PropTypes.node,
   nav: PropTypes.node,
+  className: PropTypes.string,
 }).isRequired;
 
 export {

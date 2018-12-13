@@ -9,10 +9,11 @@ function Layout({
   footer,
   aside,
   nav,
+  className,
 }) {
   return (
     <>
-      <div className="layout">
+      <div className={`layout ${className}`}>
         <main className="content">
           { children }
         </main>
@@ -37,6 +38,7 @@ Layout.defaultProps = {
   footer: null,
   aside: null,
   nav: null,
+  className: '',
 };
 
 Layout.propTypes = LayoutProps;
