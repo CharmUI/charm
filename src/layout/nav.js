@@ -6,15 +6,13 @@ function Nav({
   content,
 }) {
   return (
-    <>
-      <ul className="list list--inline list--style-none">
-        { content && content.map((item, index) => (
-          <li key={index} className="text--secondary">
-            { item }
-          </li>
-        )) }
-      </ul>
-    </>
+    <ul className="list list--inline list--style-none">
+      { content && content.map((item, index) => (
+        <li key={index} className="text--secondary">
+          { item }
+        </li>
+      )) }
+    </ul>
   );
 }
 

@@ -24,7 +24,6 @@ const LayoutProps = PropTypes.shape({
 
 export {
   LayoutProps,
-  FooterProps,
   NavProps,
   AsideProps,
 };
