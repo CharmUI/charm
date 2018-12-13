@@ -24,7 +24,7 @@ function Layout({
           { children }
         </main>
 
-        <footer className="content footer">
+        <footer className="content">
           <hr />
 
           { footer }
