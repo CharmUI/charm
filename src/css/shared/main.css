@@ -42,15 +42,3 @@ ul,
 dl {
   margin-bottom: 22px;
 }
-
-a {
-  color: var(--color-blue);
-  text-decoration: underline;
-  background-color: transparent;
-  cursor: pointer;
-  
-  &:hover {
-    color: var(--color-blue);
-    text-decoration: underline;
-  }
-}

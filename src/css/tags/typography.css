@@ -13,6 +13,18 @@ em {
   font-style: italic;
 }
 
+a {
+  color: var(--color-blue);
+  text-decoration: underline;
+  background-color: transparent;
+  cursor: pointer;
+  
+  &:hover {
+    color: var(--color-blue);
+    text-decoration: underline;
+  }
+}
+
 small {
   font-size: 11px;
   line-height: 33px;

@@ -19,6 +19,18 @@
   font-weight: 500;
 }
 
+.link {
+  color: var(--color-blue);
+  text-decoration: underline;
+  background-color: transparent;
+  cursor: pointer;
+  
+  &:hover {
+    color: var(--color-blue);
+    text-decoration: underline;
+  }
+}
+
 .blockquote {
   max-width: 594px;
 
