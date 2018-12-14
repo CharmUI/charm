@@ -9,6 +9,10 @@
   font-weight: 600;
 }
 
+.em {
+  font-style: italic;
+}
+
 .small {
   font-size: 11px;
   line-height: 33px;
