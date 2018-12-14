@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import { AsideProps } from '../proptypes';
 
@@ -27,4 +27,4 @@ Aside.defaultProps = {
 
 Aside.propTypes = AsideProps;
 
-export default Aside;
+export default memo(Aside);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import { NavProps } from '../proptypes';
 
@@ -25,4 +25,4 @@ Nav.defaultProps = {
 
 Nav.propTypes = NavProps;
 
-export default Nav;
+export default memo(Nav);
