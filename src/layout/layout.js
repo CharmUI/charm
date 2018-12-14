@@ -18,7 +18,7 @@ function Layout({
   return (
     <>
       <div className={`layout ${className}`} {...restProps}>
-        <nav className="content content--nav">{ nav }</nav>
+        <nav className="content">{ nav }</nav>
 
         <main className="content">
           { children }
