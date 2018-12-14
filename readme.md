@@ -1,6 +1,6 @@
-<p align="center">
-  ![Logo image](https://raw.githubusercontent.com/CharmUI/charm/master/logo.jpg)
+![Logo image](https://raw.githubusercontent.com/CharmUI/charm/master/logo.jpg)
 
+<p align="center">
   <h3 align="center">Charm UI</h3>
 
   <p align="center">
