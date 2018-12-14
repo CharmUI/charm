@@ -1,19 +1,15 @@
 ![Logo image](https://raw.githubusercontent.com/CharmUI/charm/master/logo.jpg)
 
 <p align="center">
-  <h3 align="center">Charm UI</h3>
-
-  <p align="center">
-    Charming UI Framework
-  </p>
+  Charming UI Framework
 </p>
 
 #  
 
 ### Getting started
 
-Start with downloading Charm UI from *npm*:
-- [npm](https://www.npmjs.com/): `npm install charm-ui`
+Start with downloading Charm UI from **npm**:
+- `npm install charm-ui`
 
 Read more on [Getting started page](https://charmui.github.io/charm-docs/) for information on the framework contents and more.
 
