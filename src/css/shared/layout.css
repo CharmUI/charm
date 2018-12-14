@@ -15,13 +15,13 @@
   padding: 0 22px 0 33px;
   margin-bottom: 88px;
 
+  &--nav {
+    height: 33px;
+  }
+
   @media (min-width: 576px) {
     padding: 0 99px 0 66px;
   }
-}
-
-.nav {
-  height: 33px;
 }
 
 .aside {
