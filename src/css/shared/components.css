@@ -9,33 +9,6 @@
   letter-spacing: 0.008em;
 }
 
-.link {
-
-  &--main {
-    font-size: 15px;
-    line-height: 33px;
-    font-weight: 600;
-    letter-spacing: 0.002em;
-    text-decoration: none;
-
-    color: var(--color-fontSecondary-light);
-
-    &:hover {
-      color: var(--color-fontSecondary-70);
-    }
-  
-    &.is-active {
-      color: var(--color-fontSecondary);
-    }
-  }
-
-  &--small {
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--color-fontSecondary-70);
-  }
-}
-
 .blockcode {
   display: block;
   max-width: 594px;
