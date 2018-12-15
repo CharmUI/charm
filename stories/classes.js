@@ -8,7 +8,7 @@ storiesOf('2. Classes', module)
     <div>
       <h1 className="h1">
         Getting Started
-        <p className="lead text--light margin-top--1">This page is an overview of the React documentation and related resources.</p>
+        <p className="lead text--color--light margin-top--1">This page is an overview of the React documentation and related resources.</p>
       </h1>
       <hr />
       <p>

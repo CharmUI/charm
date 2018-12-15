@@ -11,6 +11,6 @@ storiesOf('Button', module)
     <button className="button text--right" type="button">
       Next
       <br />
-      <span className="text--blue">About&nbsp;—</span>
+      <span className="text--color--blue">About&nbsp;—</span>
     </button>
   ));
