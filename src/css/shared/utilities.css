@@ -47,6 +47,10 @@
 
   &--secondary {
     color: var(--color-fontSecondary) !important;
+
+    &--light {
+      color: var(--color-fontSecondary-light) !important;
+    }
   }
 
   &--light {
@@ -54,6 +58,14 @@
   }
 
   /* weight */
+  &--medium {
+    font-weight: 500 !important;
+  }
+
+  &--semi-bold {
+    font-weight: 600 !important;
+  }
+
   &--bold {
     font-weight: 700 !important;
   }
@@ -63,11 +75,32 @@
     text-align: right !important;
   }
 
+  &--left {
+    text-align: right !important;
+  }
+
   /* size */
   &--small {
-    font-size: 11px !important;
-    line-height: 33px !important;
-    vertical-align: middle !important;
+    font-size: 11px;
+    line-height: 33px;
+    vertical-align: middle;
+  }
+
+  &--medium {
+    font-size: 12px;
+    vertical-align: middle;
+  }
+
+  &--normal {
+    font-size: 15px;
+    line-height: 33px;
+    letter-spacing: 0.002em;
+    vertical-align: middle;
+  }
+
+  /* decoration */
+  &--no-decoration {
+    text-decoration: none !important;
   }
 }
 
