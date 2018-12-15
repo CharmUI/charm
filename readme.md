@@ -9,7 +9,7 @@
 ### Getting started
 
 Start with downloading Charm UI from **npm**:
-- `npm install charm-ui`
+`npm install charm-ui`
 
 Read more on [Getting started page](https://charmui.github.io/charm-docs/) for information on the framework contents and more.
 
@@ -21,7 +21,11 @@ Within the download you'll find the following directories and files:
 charm-ui/
 └── dist/
     ├── charm.classed.css
-    └── charm.tagged.css
+    ├── charm.tagged.css
+    └── esm/ (commonjs/)
+        └── layout/
+            └── index.js
+
 ```
 
 Charm CSS library consist of two versions - for usage with tags, and classes.
