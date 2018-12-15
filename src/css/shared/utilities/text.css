@@ -11,12 +11,12 @@
       color: var(--color-fontSecondary) !important;
 
       &--light {
-        color: var(--color-fontSecondary-light) !important;
+        color: var(--color-fontSecondary-70) !important;
       }
     }
 
     &--light {
-      color: var(--color-fontSecondary-70) !important;
+      color: var(--color-fontLight) !important;
     }
   }
 
