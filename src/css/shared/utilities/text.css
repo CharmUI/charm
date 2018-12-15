@@ -56,6 +56,7 @@
 
     &--medium {
       font-size: 12px;
+      line-height: 33px;
       vertical-align: middle;
     }
 
