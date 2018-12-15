@@ -2,7 +2,8 @@
 
 @import 'reset.css';
 @import 'main.css';
-@import 'utilities.css';
 
-@import 'components.css';
+@import 'utilities/all.css';
+@import 'components/all.css';
+
 @import 'layout.css';
