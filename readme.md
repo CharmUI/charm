@@ -8,7 +8,8 @@
 
 ### Getting started
 
-Start with downloading Charm UI from **npm**:
+Start with downloading Charm UI from **npm**:  
+
 `npm install charm-ui`
 
 Read more on [Getting started page](https://charmui.github.io/charm-docs/) for information on the framework contents and more.
