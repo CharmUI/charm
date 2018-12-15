@@ -10,7 +10,7 @@ function Nav({
   return (
     <ul className={`list list--inline list--style-none ${className}`} {...restProps}>
       { content && content.map((item, index) => (
-        <li key={index} className="text--secondary">
+        <li key={index} className="text--color--secondary">
           { item }
         </li>
       )) }
