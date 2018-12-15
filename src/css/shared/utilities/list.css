@@ -1,0 +1,37 @@
+.list {
+
+  &--inline {
+
+    & li {
+      display: inline-block;
+      vertical-align: top;
+
+      &::after {
+        content: '|';
+
+        margin: 0 0.8em 0 1em;
+      }
+
+      &:nth-last-of-type(1)::after {
+        content: '';
+      }
+    }
+  }
+
+  &--style-none {
+
+    & li::before {
+      display: none !important; 
+    }
+  }
+
+  &-item {
+
+    &--style-none {
+
+      &::before {
+        display: none !important; 
+      }
+    }
+  }
+}
