@@ -1,7 +1,7 @@
 .button {
   display: inline-block;
   text-align: left;
-  vertical-align: top;
+  vertical-align: middle;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
