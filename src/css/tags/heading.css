@@ -21,11 +21,11 @@ h2 {
 
 h3 {
   font-size: 15px;
-  line-height: 22px;
+  line-height: 23px;
   font-weight: 600;
   letter-spacing: -0.002em;
 
   color: var(--color-fontBlack);
   margin-bottom: 22px;
-  margin-top: 33px;
+  margin-top: 32px;
 }
