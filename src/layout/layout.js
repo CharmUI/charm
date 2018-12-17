@@ -18,20 +18,20 @@ function Layout({
   return (
     <>
       <div className={`layout ${className}`} {...restProps}>
-        <nav className="content">{ nav }</nav>
+        <nav className="content" role="contentinfo">{ nav }</nav>
 
-        <main className="content">
+        <main className="content" role="main">
           { children }
         </main>
 
-        <footer className="content">
+        <footer className="content" role="navigation">
           <hr />
 
           { footer }
         </footer>
       </div>
 
-      <aside className={`aside ${isAsideShown ? 'is-shown' : ''}`}>{ aside }</aside>
+      <aside className={`aside ${isAsideShown ? 'is-shown' : ''}`} role="navigation">{ aside }</aside>
     </>
   );
 }
