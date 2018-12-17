@@ -1,0 +1,28 @@
+table {
+  width: 100%;
+  margin: 22px 0 33px;
+  background-color: transparent;
+
+  line-height: 22px;
+
+  & th,
+  & td {
+    padding: 11px 0 10px;
+    vertical-align: top;
+    border-bottom: 1px solid rgba(221, 221, 221, 0.5);
+  }
+
+  & thead th {
+    font-size: 11px;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(221, 221, 221, 1);
+  }
+
+  & tbody + tbody {
+    border-top: 1px solid rgba(221, 221, 221, 0.5);
+  }
+
+  & table {
+    background-color: #fff;
+  }
+}
